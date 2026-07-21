@@ -1,4 +1,5 @@
-import { Swords, BookOpen } from 'lucide-react';
+import { Link } from 'react-router-dom';
+import { Swords, BookOpen, Megaphone } from 'lucide-react';
 
 interface Recommendation {
   title: string;
@@ -98,24 +99,37 @@ const GmCard = ({ gm }: { gm: Gm }) => (
   </div>
 );
 
-const Instructors = () => {
+const TTRPG = () => {
   return (
     <div className="flex-1 py-20 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto">
       <div className="text-center mb-16">
         <Swords className="w-10 h-10 text-primary mx-auto mb-4" />
-        <h1 className="text-4xl md:text-5xl font-bold text-text-h mb-4">Meet the GMs</h1>
+        <h1 className="text-4xl md:text-5xl font-bold text-text-h mb-4">The TTRPG World</h1>
         <p className="text-text max-w-2xl mx-auto">
-          Our in-house Game Masters and instructors are ready to run your next campaign — here's who they are and what they recommend.
+          Tabletop role-playing games at Geek Center — campaigns, one-shots, and the Game Masters who run them.
+          Looking for board game tables like Catan instead? Head over to the{' '}
+          <Link to="/geekrpg/reserve" className="text-primary underline">Board Games</Link> section.
         </p>
       </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-        {gms.map((gm) => (
-          <GmCard key={gm.name} gm={gm} />
-        ))}
+      <div className="mb-20">
+        <h2 className="text-3xl font-bold text-text-h mb-12 text-center">Meet the GMs</h2>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+          {gms.map((gm) => (
+            <GmCard key={gm.name} gm={gm} />
+          ))}
+        </div>
+      </div>
+
+      <div className="p-12 border border-dashed border-border rounded-3xl bg-white dark:bg-geek-card text-center">
+        <Megaphone className="w-10 h-10 text-primary mx-auto mb-4" />
+        <h2 className="text-2xl font-bold text-text-h mb-2">Post your game — coming soon</h2>
+        <p className="text-text max-w-xl mx-auto">
+          Soon, GMs will be able to publish their own campaigns and one-shots here to find players. Stay tuned.
+        </p>
       </div>
     </div>
   );
 };
 
-export default Instructors;
+export default TTRPG;

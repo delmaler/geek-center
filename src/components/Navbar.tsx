@@ -5,9 +5,10 @@ import { LogOut, User, Menu, X } from 'lucide-react';
 
 const navLinks = [
   { name: 'Home', path: '/' },
+  { name: 'Geek Cafe', path: '/geek-cafe' },
+  { name: 'Geek Art', path: '/geek-art' },
+  { name: 'GeekRPG', path: '/geekrpg' },
   { name: 'About', path: '/about' },
-  { name: 'Reserve', path: '/reserve' },
-  { name: 'Meet the GMs', path: '/instructors' },
 ];
 
 const Navbar = () => {

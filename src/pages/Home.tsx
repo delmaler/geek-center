@@ -59,7 +59,7 @@ const Home = () => {
             </p>
             <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
               <Link
-                to="/reserve"
+                to="/geekrpg/reserve"
                 className="w-full sm:w-auto px-8 py-4 bg-primary hover:bg-opacity-90 rounded-full text-lg font-bold transition-all shadow-lg shadow-primary/30 flex items-center justify-center"
               >
                 Reserve a Table
@@ -139,7 +139,7 @@ const Home = () => {
           <h2 className="text-3xl md:text-4xl font-bold text-text-h mb-6">Ready to Join the Table?</h2>
           <p className="text-text mb-10">Whether you're a solo player or bringing the whole party, we have a spot for you.</p>
           <Link
-            to="/reserve"
+            to="/geekrpg/reserve"
             className="inline-flex items-center px-10 py-4 bg-primary text-white rounded-full text-xl font-bold hover:scale-105 transition-transform"
           >
             Book Your Session
