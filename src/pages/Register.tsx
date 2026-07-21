@@ -1,5 +1,6 @@
 import { useState, type ChangeEvent, type FormEvent } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { useAuth } from '../context/AuthContext.tsx';
 import { Mail, Lock, User, UserPlus, AlertCircle } from 'lucide-react';
 
@@ -11,6 +12,7 @@ interface RegisterFormData {
 }
 
 const Register = () => {
+  const { t } = useTranslation();
   const [formData, setFormData] = useState<RegisterFormData>({
     name: '',
     email: '',
@@ -30,18 +32,18 @@ const Register = () => {
     setError('');
 
     if (Object.values(formData).some(val => !val)) {
-      setError('Please fill in all fields');
+      setError(t('register.errorFillFields'));
       return;
     }
 
     if (formData.password !== formData.confirmPassword) {
-      setError('Passwords do not match');
+      setError(t('register.errorPasswordMismatch'));
       return;
     }
 
     // Mock register
     register({ email: formData.email, name: formData.name });
-    navigate('/reserve');
+    navigate('/geekrpg/reserve');
   };
 
   return (
@@ -49,74 +51,74 @@ const Register = () => {
       <div className="w-full max-w-md bg-white dark:bg-geek-card border border-border rounded-2xl shadow-xl overflow-hidden">
         <div className="bg-geek-bg p-8 text-center text-white">
           <UserPlus className="w-12 h-12 text-primary mx-auto mb-4" />
-          <h1 className="text-2xl font-bold">Join the Hub</h1>
-          <p className="text-gray-400 mt-2">Start your adventure today.</p>
+          <h1 className="text-2xl font-bold">{t('register.title')}</h1>
+          <p className="text-gray-400 mt-2">{t('register.subtitle')}</p>
         </div>
 
         <form onSubmit={handleSubmit} className="p-8 space-y-4">
           {error && (
             <div className="flex items-center p-3 bg-red-50 text-red-600 rounded-lg text-sm border border-red-100">
-              <AlertCircle className="w-4 h-4 mr-2" />
+              <AlertCircle className="w-4 h-4 me-2" />
               {error}
             </div>
           )}
 
           <div className="space-y-2">
-            <label className="text-sm font-semibold text-text-h">Full Name</label>
+            <label className="text-sm font-semibold text-text-h">{t('register.fullNameLabel')}</label>
             <div className="relative">
-              <User className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-text" />
+              <User className="absolute start-3 top-1/2 -translate-y-1/2 w-5 h-5 text-text" />
               <input
                 name="name"
                 type="text"
                 value={formData.name}
                 onChange={handleChange}
-                className="w-full pl-10 pr-4 py-3 bg-white dark:bg-transparent border border-border rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
-                placeholder="John Doe"
+                className="w-full ps-10 pe-4 py-3 bg-white dark:bg-transparent border border-border rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
+                placeholder={t('register.fullNamePlaceholder')}
               />
             </div>
           </div>
 
           <div className="space-y-2">
-            <label className="text-sm font-semibold text-text-h">Email Address</label>
+            <label className="text-sm font-semibold text-text-h">{t('register.emailLabel')}</label>
             <div className="relative">
-              <Mail className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-text" />
+              <Mail className="absolute start-3 top-1/2 -translate-y-1/2 w-5 h-5 text-text" />
               <input
                 name="email"
                 type="email"
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full pl-10 pr-4 py-3 bg-white dark:bg-transparent border border-border rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
-                placeholder="you@example.com"
+                className="w-full ps-10 pe-4 py-3 bg-white dark:bg-transparent border border-border rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
+                placeholder={t('register.emailPlaceholder')}
               />
             </div>
           </div>
 
           <div className="grid grid-cols-1 gap-4">
             <div className="space-y-2">
-              <label className="text-sm font-semibold text-text-h">Password</label>
+              <label className="text-sm font-semibold text-text-h">{t('register.passwordLabel')}</label>
               <div className="relative">
-                <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-text" />
+                <Lock className="absolute start-3 top-1/2 -translate-y-1/2 w-5 h-5 text-text" />
                 <input
                   name="password"
                   type="password"
                   value={formData.password}
                   onChange={handleChange}
-                  className="w-full pl-10 pr-4 py-3 bg-white dark:bg-transparent border border-border rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
+                  className="w-full ps-10 pe-4 py-3 bg-white dark:bg-transparent border border-border rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
                   placeholder="••••••••"
                 />
               </div>
             </div>
 
             <div className="space-y-2">
-              <label className="text-sm font-semibold text-text-h">Confirm Password</label>
+              <label className="text-sm font-semibold text-text-h">{t('register.confirmPasswordLabel')}</label>
               <div className="relative">
-                <Lock className="absolute left-3 top-1/2 -translate-y-1/2 w-5 h-5 text-text" />
+                <Lock className="absolute start-3 top-1/2 -translate-y-1/2 w-5 h-5 text-text" />
                 <input
                   name="confirmPassword"
                   type="password"
                   value={formData.confirmPassword}
                   onChange={handleChange}
-                  className="w-full pl-10 pr-4 py-3 bg-white dark:bg-transparent border border-border rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
+                  className="w-full ps-10 pe-4 py-3 bg-white dark:bg-transparent border border-border rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
                   placeholder="••••••••"
                 />
               </div>
@@ -127,13 +129,13 @@ const Register = () => {
             type="submit"
             className="w-full py-3 bg-primary text-white font-bold rounded-xl hover:bg-opacity-90 transition-all shadow-lg shadow-primary/20 mt-4"
           >
-            Create Account
+            {t('register.createAccount')}
           </button>
 
           <p className="text-center text-sm text-text">
-            Already have an account?{' '}
+            {t('register.alreadyHaveAccount')}{' '}
             <Link to="/login" className="text-primary font-bold hover:underline">
-              Login here
+              {t('register.loginHere')}
             </Link>
           </p>
         </form>

@@ -1,20 +1,23 @@
 import { useState } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { useAuth } from '../context/AuthContext.tsx';
 import { LogOut, User, Menu, X } from 'lucide-react';
-
-const navLinks = [
-  { name: 'Home', path: '/' },
-  { name: 'Geek Cafe', path: '/geek-cafe' },
-  { name: 'Geek Art', path: '/geek-art' },
-  { name: 'GeekRPG', path: '/geekrpg' },
-  { name: 'About', path: '/about' },
-];
+import LanguageSwitcher from './LanguageSwitcher.tsx';
 
 const Navbar = () => {
+  const { t } = useTranslation();
   const { user, logout } = useAuth();
   const navigate = useNavigate();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+
+  const navLinks = [
+    { name: t('nav.home'), path: '/' },
+    { name: 'Geek Cafe', path: '/geek-cafe' },
+    { name: 'Geek Art', path: '/geek-art' },
+    { name: 'GeekRPG', path: '/geekrpg' },
+    { name: t('nav.about'), path: '/about' },
+  ];
 
   const handleLogout = () => {
     logout();
@@ -37,10 +40,11 @@ const Navbar = () => {
             ))}
           </div>
 
-          <div className="hidden md:flex md:items-center md:space-x-4">
+          <div className="hidden md:flex md:items-center md:space-x-4 rtl:space-x-reverse">
+            <LanguageSwitcher />
             {user ? (
-              <div className="flex items-center space-x-4">
-                <div className="flex items-center space-x-2 text-sm text-text-h">
+              <div className="flex items-center space-x-4 rtl:space-x-reverse">
+                <div className="flex items-center space-x-2 rtl:space-x-reverse text-sm text-text-h">
                   <User className="w-4 h-4" />
                   <span>{user.name}</span>
                 </div>
@@ -48,29 +52,29 @@ const Navbar = () => {
                   onClick={handleLogout}
                   className="inline-flex items-center px-3 py-1.5 border border-transparent text-sm font-medium rounded-md text-white bg-primary hover:bg-opacity-90 transition-all shadow-sm"
                 >
-                  <LogOut className="w-4 h-4 mr-2" />
-                  Logout
+                  <LogOut className="w-4 h-4 me-2" />
+                  {t('nav.logout')}
                 </button>
               </div>
             ) : (
-              <div className="space-x-4">
+              <div className="space-x-4 rtl:space-x-reverse">
                 <Link
                   to="/login"
                   className="text-sm font-medium text-text hover:text-primary transition-colors"
                 >
-                  Login
+                  {t('nav.login')}
                 </Link>
                 <Link
                   to="/register"
                   className="inline-flex items-center px-4 py-2 border border-transparent text-sm font-medium rounded-md text-white bg-primary hover:bg-opacity-90 transition-all shadow-lg shadow-primary/20"
                 >
-                  Register
+                  {t('nav.register')}
                 </Link>
               </div>
             )}
           </div>
 
-          <div className="flex items-center md:hidden ml-auto">
+          <div className="flex items-center md:hidden ms-auto">
             <button
               onClick={() => setIsMenuOpen(!isMenuOpen)}
               className="inline-flex items-center justify-center p-2 rounded-md text-text hover:text-primary focus:outline-none"
@@ -96,19 +100,23 @@ const Navbar = () => {
               </Link>
             ))}
           </div>
+          <div className="px-5 pt-2 pb-1">
+            <LanguageSwitcher />
+          </div>
+
           <div className="pt-4 pb-3 border-t border-border">
             {user ? (
               <div className="px-5 space-y-3">
                 <div className="flex items-center text-text-h">
-                  <User className="w-5 h-5 mr-2" />
+                  <User className="w-5 h-5 me-2" />
                   <span className="font-medium">{user.name}</span>
                 </div>
                 <button
                   onClick={handleLogout}
                   className="w-full flex items-center justify-center px-4 py-2 border border-transparent text-base font-medium rounded-md text-white bg-primary"
                 >
-                  <LogOut className="w-5 h-5 mr-2" />
-                  Logout
+                  <LogOut className="w-5 h-5 me-2" />
+                  {t('nav.logout')}
                 </button>
               </div>
             ) : (
@@ -118,14 +126,14 @@ const Navbar = () => {
                   className="block w-full text-center px-4 py-2 text-base font-medium text-text border border-border rounded-md"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Login
+                  {t('nav.login')}
                 </Link>
                 <Link
                   to="/register"
                   className="block w-full text-center px-4 py-2 text-base font-medium text-white bg-primary rounded-md"
                   onClick={() => setIsMenuOpen(false)}
                 >
-                  Register
+                  {t('nav.register')}
                 </Link>
               </div>
             )}

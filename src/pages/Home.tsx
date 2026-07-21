@@ -1,4 +1,5 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { Gamepad2, Coffee, Users, Shield, Star, ChevronRight, type LucideIcon } from 'lucide-react';
 
 interface FeatureCardProps {
@@ -32,7 +33,7 @@ const TestimonialCard = ({ quote, author, role }: TestimonialCardProps) => (
     </div>
     <p className="text-text mb-4">"{quote}"</p>
     <div className="flex items-center">
-      <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center mr-3 not-italic font-bold text-primary">
+      <div className="w-10 h-10 bg-primary/20 rounded-full flex items-center justify-center me-3 not-italic font-bold text-primary">
         {author[0]}
       </div>
       <div className="not-italic">
@@ -44,6 +45,8 @@ const TestimonialCard = ({ quote, author, role }: TestimonialCardProps) => (
 );
 
 const Home = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="flex-1">
       {/* Hero Section */}
@@ -52,24 +55,24 @@ const Home = () => {
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
           <div className="text-center">
             <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-6">
-              Level Up Your <span className="text-primary">Hangouts</span>
+              {t('home.heroTitlePrefix')} <span className="text-primary">{t('home.heroTitleHighlight')}</span>
             </h1>
             <p className="text-xl md:text-2xl text-gray-300 mb-10 max-w-3xl mx-auto">
-              Welcome to Geek Center—the ultimate haven for board games, tabletop RPGs, and legendary community vibes.
+              {t('home.heroSubtitle')}
             </p>
-            <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6">
+            <div className="flex flex-col sm:flex-row justify-center items-center space-y-4 sm:space-y-0 sm:space-x-6 rtl:sm:space-x-reverse">
               <Link
                 to="/geekrpg/reserve"
                 className="w-full sm:w-auto px-8 py-4 bg-primary hover:bg-opacity-90 rounded-full text-lg font-bold transition-all shadow-lg shadow-primary/30 flex items-center justify-center"
               >
-                Reserve a Table
-                <ChevronRight className="ml-2 w-5 h-5" />
+                {t('home.reserveTable')}
+                <ChevronRight className="ms-2 w-5 h-5 rtl:rotate-180" />
               </Link>
               <Link
                 to="/about"
                 className="w-full sm:w-auto px-8 py-4 bg-transparent border-2 border-white/20 hover:border-white/40 rounded-full text-lg font-bold transition-all"
               >
-                Our Story
+                {t('home.ourStory')}
               </Link>
             </div>
           </div>
@@ -79,29 +82,29 @@ const Home = () => {
       {/* Features Grid */}
       <section className="py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-bold text-text-h mb-4">Why Geek Center?</h2>
-          <p className="text-text max-w-2xl mx-auto">We've built more than just a café. We've built a home for every kind of gamer.</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-text-h mb-4">{t('home.whyTitle')}</h2>
+          <p className="text-text max-w-2xl mx-auto">{t('home.whySubtitle')}</p>
         </div>
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           <FeatureCard
             icon={Gamepad2}
-            title="500+ Game Library"
-            description="From classic strategy to the latest indie releases, our curated collection has it all."
+            title={t('home.feature1Title')}
+            description={t('home.feature1Desc')}
           />
           <FeatureCard
             icon={Coffee}
-            title="Premium Fuel"
-            description="Craft coffees, artisanal snacks, and local brews to keep your brain sharp."
+            title={t('home.feature2Title')}
+            description={t('home.feature2Desc')}
           />
           <FeatureCard
             icon={Users}
-            title="Pro Game Masters"
-            description="Need someone to run your campaign? Our in-house GMs are ready for adventure."
+            title={t('home.feature3Title')}
+            description={t('home.feature3Desc')}
           />
           <FeatureCard
             icon={Shield}
-            title="Private RPG Rooms"
-            description="Themed rooms with adjustable lighting and soundscapes for total immersion."
+            title={t('home.feature4Title')}
+            description={t('home.feature4Desc')}
           />
         </div>
       </section>
@@ -110,24 +113,24 @@ const Home = () => {
       <section className="py-20 bg-accent-bg">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <h2 className="text-3xl md:text-4xl font-bold text-text-h mb-4">Community Buzz</h2>
-            <p className="text-text">Hear from our regulars who call this place home.</p>
+            <h2 className="text-3xl md:text-4xl font-bold text-text-h mb-4">{t('home.buzzTitle')}</h2>
+            <p className="text-text">{t('home.buzzSubtitle')}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             <TestimonialCard
-              quote="The private RPG rooms are a game-changer. The atmosphere is unbeatable!"
-              author="Alex Rivers"
-              role="Dungeon Master"
+              quote={t('home.testimonial1Quote')}
+              author={t('home.testimonial1Author')}
+              role={t('home.testimonial1Role')}
             />
             <TestimonialCard
-              quote="Best coffee in town and the library is always up to date. Love the weekend tournaments."
-              author="Sarah Chen"
-              role="Strategy Enthusiast"
+              quote={t('home.testimonial2Quote')}
+              author={t('home.testimonial2Author')}
+              role={t('home.testimonial2Role')}
             />
             <TestimonialCard
-              quote="Finally a place where I can find people to play complex board games with. Great community."
-              author="Marcus Thorne"
-              role="Eurogame Fan"
+              quote={t('home.testimonial3Quote')}
+              author={t('home.testimonial3Author')}
+              role={t('home.testimonial3Role')}
             />
           </div>
         </div>
@@ -136,13 +139,13 @@ const Home = () => {
       {/* CTA Footer */}
       <section className="py-20 text-center">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-3xl md:text-4xl font-bold text-text-h mb-6">Ready to Join the Table?</h2>
-          <p className="text-text mb-10">Whether you're a solo player or bringing the whole party, we have a spot for you.</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-text-h mb-6">{t('home.ctaTitle')}</h2>
+          <p className="text-text mb-10">{t('home.ctaSubtitle')}</p>
           <Link
             to="/geekrpg/reserve"
             className="inline-flex items-center px-10 py-4 bg-primary text-white rounded-full text-xl font-bold hover:scale-105 transition-transform"
           >
-            Book Your Session
+            {t('home.ctaButton')}
           </Link>
         </div>
       </section>

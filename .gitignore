@@ -13,6 +13,7 @@ dist-ssr
 *.local
 *.tsbuildinfo
 .claude/settings.local.json
+.playwright-mcp/
 
 # Editor directories and files
 .vscode/*

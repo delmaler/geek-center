@@ -1,14 +1,17 @@
 import { Link } from 'react-router-dom';
+import { useTranslation } from 'react-i18next';
 import { Swords, Dice5, ChevronRight } from 'lucide-react';
 
 const GeekRPG = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="flex-1 py-20 px-4 sm:px-6 lg:px-8 max-w-6xl mx-auto">
       <div className="text-center mb-16">
         <Swords className="w-12 h-12 text-primary mx-auto mb-4" />
-        <h1 className="text-4xl md:text-5xl font-bold text-text-h mb-6">GeekRPG</h1>
+        <h1 className="text-4xl md:text-5xl font-bold text-text-h mb-6">{t('geekRPG.title')}</h1>
         <p className="text-text max-w-2xl mx-auto">
-          Everything tabletop — from board game nights to full tabletop RPG campaigns.
+          {t('geekRPG.subtitle')}
         </p>
       </div>
 
@@ -18,12 +21,12 @@ const GeekRPG = () => {
           className="group p-10 bg-white dark:bg-geek-card border border-border rounded-3xl hover:border-primary transition-all"
         >
           <Dice5 className="w-10 h-10 text-primary mb-4" />
-          <h2 className="text-2xl font-bold text-text-h mb-3">Board Games</h2>
+          <h2 className="text-2xl font-bold text-text-h mb-3">{t('geekRPG.boardGamesTitle')}</h2>
           <p className="text-text mb-6">
-            Reserve a table for board games like Catan and more.
+            {t('geekRPG.boardGamesDesc')}
           </p>
-          <span className="inline-flex items-center text-primary font-semibold group-hover:translate-x-1 transition-transform">
-            Reserve a table <ChevronRight className="w-4 h-4 ml-1" />
+          <span className="inline-flex items-center text-primary font-semibold group-hover:translate-x-1 rtl:group-hover:-translate-x-1 transition-transform">
+            {t('geekRPG.boardGamesCta')} <ChevronRight className="w-4 h-4 ms-1 rtl:rotate-180" />
           </span>
         </Link>
 
@@ -32,12 +35,12 @@ const GeekRPG = () => {
           className="group p-10 bg-white dark:bg-geek-card border border-border rounded-3xl hover:border-primary transition-all"
         >
           <Swords className="w-10 h-10 text-primary mb-4" />
-          <h2 className="text-2xl font-bold text-text-h mb-3">TTRPG</h2>
+          <h2 className="text-2xl font-bold text-text-h mb-3">{t('geekRPG.ttrpgTitle')}</h2>
           <p className="text-text mb-6">
-            Dive into the tabletop RPG world, meet our Game Masters, and find a table to join.
+            {t('geekRPG.ttrpgDesc')}
           </p>
-          <span className="inline-flex items-center text-primary font-semibold group-hover:translate-x-1 transition-transform">
-            Explore TTRPG <ChevronRight className="w-4 h-4 ml-1" />
+          <span className="inline-flex items-center text-primary font-semibold group-hover:translate-x-1 rtl:group-hover:-translate-x-1 transition-transform">
+            {t('geekRPG.ttrpgCta')} <ChevronRight className="w-4 h-4 ms-1 rtl:rotate-180" />
           </span>
         </Link>
       </div>
