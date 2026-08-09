@@ -20,9 +20,9 @@
   --color-rpg: #4b2e83;
   --color-rpg-deep: #3a2266;
 
-  --font-display: "Playfair Display", "Georgia", serif;
-  --font-eyebrow: "Cinzel", "Georgia", serif;
-  --font-body: "EB Garamond", "Georgia", serif;
+  --font-display: "Playfair Display", "Frank Ruhl Libre", "Georgia", serif;
+  --font-eyebrow: "Cinzel", "Frank Ruhl Libre", "Georgia", serif;
+  --font-body: "EB Garamond", "David Libre", "Georgia", serif;
 }
 
 :root {
