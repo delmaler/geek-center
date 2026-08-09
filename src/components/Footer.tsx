@@ -1,66 +1,100 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Gamepad2, Globe, MessageCircle, Share2, Mail } from 'lucide-react';
+import { MapPin, Clock, Phone, Mail, MessageCircle, Share2, Globe } from 'lucide-react';
+import CompassMark from './CompassMark.tsx';
 
 const Footer = () => {
   const { t } = useTranslation();
 
+  const hours = [
+    { day: t('about.hoursMonThu'), time: t('about.timeMonThu') },
+    { day: t('about.hoursFriday'), time: t('about.timeFriday') },
+    { day: t('about.hoursSaturday'), time: t('about.timeSaturday') },
+  ];
+
   return (
-    <footer className="bg-geek-bg text-white pt-16 pb-8 border-t border-white/10">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-4 gap-12 mb-12">
-          <div className="col-span-1 md:col-span-1">
-            <Link to="/" className="flex items-center space-x-2 rtl:space-x-reverse mb-6 group">
-              <Gamepad2 className="w-8 h-8 text-primary group-hover:rotate-12 transition-transform duration-300" />
-              <span className="text-xl font-bold">Geek Center</span>
+    <footer className="bg-geek-bg">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
+          <div>
+            <Link to="/" className="flex items-center gap-2 mb-4 group">
+              <CompassMark className="w-8 h-8" />
+              <span className="font-display font-bold text-xl text-text-h">
+                GeekCenter<span className="text-primary">.co.il</span>
+              </span>
             </Link>
-            <p className="text-gray-400 text-sm leading-relaxed">
-              {t('footer.tagline')}
+            <p className="text-text text-sm leading-relaxed mb-5">{t('footer.tagline')}</p>
+            <div className="flex gap-3">
+              <a href="#" aria-label="Community chat" className="p-2 border border-border rounded-full text-text-h hover:text-primary hover:border-primary transition-colors">
+                <MessageCircle className="w-4 h-4" strokeWidth={1.75} />
+              </a>
+              <a href="#" aria-label="Share" className="p-2 border border-border rounded-full text-text-h hover:text-primary hover:border-primary transition-colors">
+                <Share2 className="w-4 h-4" strokeWidth={1.75} />
+              </a>
+              <a href="#" aria-label="Community" className="p-2 border border-border rounded-full text-text-h hover:text-primary hover:border-primary transition-colors">
+                <Globe className="w-4 h-4" strokeWidth={1.75} />
+              </a>
+            </div>
+          </div>
+
+          <div>
+            <h4 className="font-eyebrow text-xs text-primary mb-5 flex items-center gap-2">
+              <MapPin className="w-4 h-4" strokeWidth={1.75} />
+              {t('footer.locationTitle')}
+            </h4>
+            <p className="text-text text-sm leading-relaxed mb-4">
+              {t('about.addressLine1')}<br />{t('about.addressLine2')}
             </p>
+            <a href="#" className="font-eyebrow text-[11px] text-primary hover:underline">
+              {t('footer.viewOnMap')} &rarr;
+            </a>
           </div>
 
           <div>
-            <h4 className="text-lg font-bold mb-6">{t('footer.quickLinks')}</h4>
-            <ul className="space-y-4 text-sm text-gray-400">
-              <li><Link to="/" className="hover:text-primary transition-colors">{t('footer.home')}</Link></li>
-              <li><Link to="/geek-cafe" className="hover:text-primary transition-colors">Geek Cafe</Link></li>
-              <li><Link to="/geek-art" className="hover:text-primary transition-colors">Geek Art</Link></li>
-              <li><Link to="/geekrpg" className="hover:text-primary transition-colors">GeekRPG</Link></li>
-              <li><Link to="/about" className="hover:text-primary transition-colors">{t('footer.ourStory')}</Link></li>
-              <li><Link to="/login" className="hover:text-primary transition-colors">{t('footer.memberLogin')}</Link></li>
+            <h4 className="font-eyebrow text-xs text-primary mb-5 flex items-center gap-2">
+              <Clock className="w-4 h-4" strokeWidth={1.75} />
+              {t('about.hoursTitle')}
+            </h4>
+            <ul className="space-y-2 text-sm text-text">
+              {hours.map((item) => (
+                <li key={item.day} className="flex justify-between gap-4">
+                  <span>{item.day}</span>
+                  <span className="text-text-h">{item.time}</span>
+                </li>
+              ))}
             </ul>
           </div>
 
           <div>
-            <h4 className="text-lg font-bold mb-6">{t('footer.community')}</h4>
-            <ul className="space-y-4 text-sm text-gray-400">
-              <li><a href="#" className="hover:text-primary transition-colors">{t('footer.upcomingEvents')}</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">{t('footer.tournamentResults')}</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">{t('footer.gameLibrary')}</a></li>
-              <li><a href="#" className="hover:text-primary transition-colors">{t('footer.membershipPerks')}</a></li>
+            <h4 className="font-eyebrow text-xs text-primary mb-5 flex items-center gap-2">
+              <Phone className="w-4 h-4" strokeWidth={1.75} />
+              {t('footer.contactTitle')}
+            </h4>
+            <ul className="space-y-3 text-sm text-text">
+              <li className="flex items-center gap-2">
+                <Mail className="w-3.5 h-3.5 text-primary shrink-0" strokeWidth={1.75} />
+                <a href={`mailto:${t('about.email')}`} className="hover:text-primary transition-colors">{t('about.email')}</a>
+              </li>
+              <li className="flex items-center gap-2">
+                <Phone className="w-3.5 h-3.5 text-primary shrink-0" strokeWidth={1.75} />
+                <a href={`tel:${t('about.phone')}`} className="hover:text-primary transition-colors">{t('about.phone')}</a>
+              </li>
+              <li className="flex items-center gap-2">
+                <MessageCircle className="w-3.5 h-3.5 text-primary shrink-0" strokeWidth={1.75} />
+                <a href="#" className="hover:text-primary transition-colors">{t('footer.whatsapp')}</a>
+              </li>
             </ul>
-          </div>
-
-          <div>
-            <h4 className="text-lg font-bold mb-6">{t('footer.stayConnected')}</h4>
-            <div className="flex space-x-4 rtl:space-x-reverse mb-6">
-              <a href="#" className="p-2 bg-white/5 hover:bg-primary/20 rounded-lg transition-colors"><MessageCircle className="w-5 h-5" /></a>
-              <a href="#" className="p-2 bg-white/5 hover:bg-primary/20 rounded-lg transition-colors"><Share2 className="w-5 h-5" /></a>
-              <a href="#" className="p-2 bg-white/5 hover:bg-primary/20 rounded-lg transition-colors"><Globe className="w-5 h-5" /></a>
-            </div>
-            <div className="relative">
-              <Mail className="absolute start-3 top-1/2 -translate-y-1/2 w-4 h-4 text-gray-500" />
-              <input
-                type="email"
-                placeholder={t('footer.newsletterPlaceholder')}
-                className="w-full ps-10 pe-4 py-2 bg-white/5 border border-white/10 rounded-lg text-sm focus:outline-none focus:border-primary transition-colors"
-              />
-            </div>
           </div>
         </div>
+      </div>
 
-        <div className="pt-8 border-t border-white/5 text-center text-sm text-gray-500">
-          <p>{t('footer.copyright', { year: new Date().getFullYear() })}</p>
+      <div className="border-t border-border bg-secondary">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col sm:flex-row justify-between items-center gap-3">
+          <p className="font-eyebrow text-[11px] text-white/70">{t('footer.copyright', { year: new Date().getFullYear() })}</p>
+          <div className="flex gap-6">
+            <a href="#" className="font-eyebrow text-[11px] text-white/70 hover:text-primary transition-colors">{t('footer.privacyPolicy')}</a>
+            <a href="#" className="font-eyebrow text-[11px] text-white/70 hover:text-primary transition-colors">{t('footer.termsOfUse')}</a>
+          </div>
         </div>
       </div>
     </footer>

@@ -47,12 +47,12 @@ const Register = () => {
   };
 
   return (
-    <div className="flex-1 flex items-center justify-center p-4 bg-accent-bg/30">
-      <div className="w-full max-w-md bg-white dark:bg-geek-card border border-border rounded-2xl shadow-xl overflow-hidden">
-        <div className="bg-geek-bg p-8 text-center text-white">
-          <UserPlus className="w-12 h-12 text-primary mx-auto mb-4" />
-          <h1 className="text-2xl font-bold">{t('register.title')}</h1>
-          <p className="text-gray-400 mt-2">{t('register.subtitle')}</p>
+    <div className="flex-1 flex items-center justify-center p-4 bg-geek-accent/40">
+      <div className="w-full max-w-md bg-geek-card border border-border rounded-2xl shadow-xl overflow-hidden">
+        <div className="bg-secondary p-8 text-center text-white">
+          <UserPlus className="w-11 h-11 text-primary mx-auto mb-4" strokeWidth={1.5} />
+          <h1 className="font-display font-bold text-2xl">{t('register.title')}</h1>
+          <p className="text-white/60 mt-2 text-sm">{t('register.subtitle')}</p>
         </div>
 
         <form onSubmit={handleSubmit} className="p-8 space-y-4">
@@ -66,13 +66,13 @@ const Register = () => {
           <div className="space-y-2">
             <label className="text-sm font-semibold text-text-h">{t('register.fullNameLabel')}</label>
             <div className="relative">
-              <User className="absolute start-3 top-1/2 -translate-y-1/2 w-5 h-5 text-text" />
+              <User className="absolute start-3 top-1/2 -translate-y-1/2 w-5 h-5 text-text" strokeWidth={1.75} />
               <input
                 name="name"
                 type="text"
                 value={formData.name}
                 onChange={handleChange}
-                className="w-full ps-10 pe-4 py-3 bg-white dark:bg-transparent border border-border rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
+                className="w-full ps-10 pe-4 py-3 bg-geek-bg border border-border rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
                 placeholder={t('register.fullNamePlaceholder')}
               />
             </div>
@@ -81,13 +81,13 @@ const Register = () => {
           <div className="space-y-2">
             <label className="text-sm font-semibold text-text-h">{t('register.emailLabel')}</label>
             <div className="relative">
-              <Mail className="absolute start-3 top-1/2 -translate-y-1/2 w-5 h-5 text-text" />
+              <Mail className="absolute start-3 top-1/2 -translate-y-1/2 w-5 h-5 text-text" strokeWidth={1.75} />
               <input
                 name="email"
                 type="email"
                 value={formData.email}
                 onChange={handleChange}
-                className="w-full ps-10 pe-4 py-3 bg-white dark:bg-transparent border border-border rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
+                className="w-full ps-10 pe-4 py-3 bg-geek-bg border border-border rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
                 placeholder={t('register.emailPlaceholder')}
               />
             </div>
@@ -97,13 +97,13 @@ const Register = () => {
             <div className="space-y-2">
               <label className="text-sm font-semibold text-text-h">{t('register.passwordLabel')}</label>
               <div className="relative">
-                <Lock className="absolute start-3 top-1/2 -translate-y-1/2 w-5 h-5 text-text" />
+                <Lock className="absolute start-3 top-1/2 -translate-y-1/2 w-5 h-5 text-text" strokeWidth={1.75} />
                 <input
                   name="password"
                   type="password"
                   value={formData.password}
                   onChange={handleChange}
-                  className="w-full ps-10 pe-4 py-3 bg-white dark:bg-transparent border border-border rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
+                  className="w-full ps-10 pe-4 py-3 bg-geek-bg border border-border rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
                   placeholder="••••••••"
                 />
               </div>
@@ -112,13 +112,13 @@ const Register = () => {
             <div className="space-y-2">
               <label className="text-sm font-semibold text-text-h">{t('register.confirmPasswordLabel')}</label>
               <div className="relative">
-                <Lock className="absolute start-3 top-1/2 -translate-y-1/2 w-5 h-5 text-text" />
+                <Lock className="absolute start-3 top-1/2 -translate-y-1/2 w-5 h-5 text-text" strokeWidth={1.75} />
                 <input
                   name="confirmPassword"
                   type="password"
                   value={formData.confirmPassword}
                   onChange={handleChange}
-                  className="w-full ps-10 pe-4 py-3 bg-white dark:bg-transparent border border-border rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
+                  className="w-full ps-10 pe-4 py-3 bg-geek-bg border border-border rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
                   placeholder="••••••••"
                 />
               </div>
@@ -127,7 +127,7 @@ const Register = () => {
 
           <button
             type="submit"
-            className="w-full py-3 bg-primary text-white font-bold rounded-xl hover:bg-opacity-90 transition-all shadow-lg shadow-primary/20 mt-4"
+            className="w-full py-3.5 bg-primary text-white font-eyebrow text-xs rounded-full hover:opacity-90 transition-opacity shadow-lg shadow-primary/20 mt-4"
           >
             {t('register.createAccount')}
           </button>

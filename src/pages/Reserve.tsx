@@ -52,15 +52,15 @@ const Reserve = () => {
   if (isSubmitted) {
     return (
       <div className="flex-1 flex items-center justify-center p-4">
-        <div className="max-w-lg w-full bg-white dark:bg-geek-card border border-border rounded-3xl p-10 text-center shadow-2xl animate-in zoom-in duration-300">
-          <div className="w-20 h-20 bg-green-100 rounded-full flex items-center justify-center mx-auto mb-6">
-            <CheckCircle className="w-12 h-12 text-green-600" />
+        <div className="max-w-lg w-full bg-geek-card border border-border rounded-3xl p-10 text-center shadow-2xl">
+          <div className="w-20 h-20 bg-rpg/10 rounded-full flex items-center justify-center mx-auto mb-6">
+            <CheckCircle className="w-12 h-12 text-rpg" strokeWidth={1.5} />
           </div>
-          <h1 className="text-3xl font-bold text-text-h mb-4">{t('reserve.confirmedTitle')}</h1>
+          <h1 className="font-display font-bold text-3xl text-text-h mb-4">{t('reserve.confirmedTitle')}</h1>
           <p className="text-text mb-8">
             {t('reserve.confirmedMessage', { name: user.name })}
           </p>
-          <div className="bg-accent-bg p-6 rounded-2xl text-left space-y-3 mb-8">
+          <div className="bg-geek-accent p-6 rounded-2xl text-start space-y-3 mb-8">
             <div className="flex justify-between"><span className="text-sm text-text">{t('reserve.summaryDate')}</span> <span className="font-bold">{formData.date}</span></div>
             <div className="flex justify-between"><span className="text-sm text-text">{t('reserve.summaryTime')}</span> <span className="font-bold">{slotLabel(formData.timeSlot)} {slotTime(formData.timeSlot)}</span></div>
             <div className="flex justify-between"><span className="text-sm text-text">{t('reserve.summaryTable')}</span> <span className="font-bold">{tableLabel(formData.tableType)}</span></div>
@@ -68,7 +68,7 @@ const Reserve = () => {
           </div>
           <button
             onClick={() => navigate('/')}
-            className="w-full py-4 bg-primary text-white font-bold rounded-xl hover:bg-opacity-90 transition-all"
+            className="w-full py-3.5 bg-rpg text-white font-eyebrow text-xs rounded-full hover:opacity-90 transition-opacity"
           >
             {t('reserve.backToHome')}
           </button>
@@ -78,34 +78,34 @@ const Reserve = () => {
   }
 
   return (
-    <div className="flex-1 py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
+    <div className="flex-1 py-16 md:py-20 px-4 sm:px-6 lg:px-8 max-w-4xl mx-auto">
       <div className="text-center mb-12">
-        <h1 className="text-4xl font-bold text-text-h mb-4">{t('reserve.title')}</h1>
+        <h1 className="font-display font-bold text-4xl text-text-h mb-4">{t('reserve.title')}</h1>
         <p className="text-text">{t('reserve.subtitle')}</p>
       </div>
 
-      <div className="bg-white dark:bg-geek-card border border-border rounded-3xl shadow-xl overflow-hidden">
+      <div className="bg-geek-card border border-border rounded-3xl shadow-xl overflow-hidden">
         <div className="grid grid-cols-1 md:grid-cols-3">
-          <div className="bg-geek-bg p-8 text-white space-y-8">
+          <div className="bg-secondary p-8 text-white space-y-8">
             <div className="flex items-start">
-              <div className="p-2 bg-primary/20 rounded-lg me-4"><Calendar className="w-5 h-5 text-primary" /></div>
+              <div className="p-2 bg-rpg/30 rounded-lg me-4"><Calendar className="w-5 h-5 text-primary" strokeWidth={1.75} /></div>
               <div>
-                <h3 className="font-bold">{t('reserve.pickDateTitle')}</h3>
-                <p className="text-sm text-gray-400">{t('reserve.pickDateDesc')}</p>
+                <h3 className="font-semibold">{t('reserve.pickDateTitle')}</h3>
+                <p className="text-sm text-white/60">{t('reserve.pickDateDesc')}</p>
               </div>
             </div>
             <div className="flex items-start">
-              <div className="p-2 bg-primary/20 rounded-lg me-4"><Clock className="w-5 h-5 text-primary" /></div>
+              <div className="p-2 bg-rpg/30 rounded-lg me-4"><Clock className="w-5 h-5 text-primary" strokeWidth={1.75} /></div>
               <div>
-                <h3 className="font-bold">{t('reserve.chooseSlotTitle')}</h3>
-                <p className="text-sm text-gray-400">{t('reserve.chooseSlotDesc')}</p>
+                <h3 className="font-semibold">{t('reserve.chooseSlotTitle')}</h3>
+                <p className="text-sm text-white/60">{t('reserve.chooseSlotDesc')}</p>
               </div>
             </div>
             <div className="flex items-start">
-              <div className="p-2 bg-primary/20 rounded-lg me-4"><Sofa className="w-5 h-5 text-primary" /></div>
+              <div className="p-2 bg-rpg/30 rounded-lg me-4"><Sofa className="w-5 h-5 text-primary" strokeWidth={1.75} /></div>
               <div>
-                <h3 className="font-bold">{t('reserve.selectTableTitle')}</h3>
-                <p className="text-sm text-gray-400">{t('reserve.selectTableDesc')}</p>
+                <h3 className="font-semibold">{t('reserve.selectTableTitle')}</h3>
+                <p className="text-sm text-white/60">{t('reserve.selectTableDesc')}</p>
               </div>
             </div>
           </div>
@@ -120,17 +120,17 @@ const Reserve = () => {
                   min={new Date().toISOString().split('T')[0]}
                   value={formData.date}
                   onChange={(e) => setFormData({...formData, date: e.target.value})}
-                  className="w-full px-4 py-3 bg-white dark:bg-transparent border border-border rounded-xl focus:ring-2 focus:ring-primary outline-none"
+                  className="w-full px-4 py-3 bg-geek-bg border border-border rounded-xl focus:ring-2 focus:ring-rpg outline-none"
                 />
               </div>
               <div className="space-y-2">
                 <label className="text-sm font-semibold text-text-h">{t('reserve.guestsLabel')}</label>
                 <div className="relative">
-                  <Users className="absolute start-3 top-1/2 -translate-y-1/2 w-5 h-5 text-text" />
+                  <Users className="absolute start-3 top-1/2 -translate-y-1/2 w-5 h-5 text-text" strokeWidth={1.75} />
                   <select
                     value={formData.guests}
                     onChange={(e) => setFormData({...formData, guests: e.target.value})}
-                    className="w-full ps-10 pe-4 py-3 bg-white dark:bg-transparent border border-border rounded-xl focus:ring-2 focus:ring-primary outline-none appearance-none"
+                    className="w-full ps-10 pe-4 py-3 bg-geek-bg border border-border rounded-xl focus:ring-2 focus:ring-rpg outline-none appearance-none"
                   >
                     {[1,2,3,4,5,6,8,10,12].map(n => <option key={n} value={n}>{t('reserve.playersOption', { count: n })}</option>)}
                   </select>
@@ -148,8 +148,8 @@ const Reserve = () => {
                     onClick={() => setFormData({...formData, timeSlot: slot})}
                     className={`px-4 py-3 rounded-xl text-sm font-medium border transition-all ${
                       formData.timeSlot === slot
-                        ? 'bg-primary border-primary text-white shadow-lg shadow-primary/20'
-                        : 'border-border text-text hover:border-primary'
+                        ? 'bg-rpg border-rpg text-white shadow-lg shadow-rpg/20'
+                        : 'border-border text-text hover:border-rpg'
                     }`}
                   >
                     {slotLabel(slot)}<br/>
@@ -164,7 +164,7 @@ const Reserve = () => {
               <select
                 value={formData.tableType}
                 onChange={(e) => setFormData({...formData, tableType: e.target.value as TableType})}
-                className="w-full px-4 py-3 bg-white dark:bg-transparent border border-border rounded-xl focus:ring-2 focus:ring-primary outline-none appearance-none"
+                className="w-full px-4 py-3 bg-geek-bg border border-border rounded-xl focus:ring-2 focus:ring-rpg outline-none appearance-none"
               >
                 {tableTypes.map(table => (
                   <option key={table} value={table}>{tableLabel(table)}</option>
@@ -172,8 +172,8 @@ const Reserve = () => {
               </select>
             </div>
 
-            <div className="p-4 bg-accent-bg rounded-xl flex items-start">
-              <AlertCircle className="w-5 h-5 text-primary me-3 shrink-0 mt-0.5" />
+            <div className="p-4 bg-geek-accent rounded-xl flex items-start">
+              <AlertCircle className="w-5 h-5 text-rpg me-3 shrink-0 mt-0.5" strokeWidth={1.75} />
               <p className="text-xs text-text leading-relaxed">
                 {t('reserve.feeNotice')}
               </p>
@@ -181,7 +181,7 @@ const Reserve = () => {
 
             <button
               type="submit"
-              className="w-full py-4 bg-primary text-white font-bold rounded-xl hover:bg-opacity-90 transition-all shadow-lg shadow-primary/30"
+              className="w-full py-3.5 bg-rpg text-white font-eyebrow text-xs rounded-full hover:opacity-90 transition-opacity shadow-lg shadow-rpg/30"
             >
               {t('reserve.confirmButton')}
             </button>

@@ -1,26 +1,42 @@
 @import "tailwindcss";
 
 @theme {
-  --color-primary: #aa3bff;
-  --color-secondary: #c084fc;
-  --color-geek-bg: #16171d;
-  --color-geek-card: #1f2028;
-  --color-geek-accent: #c084fc;
-  --color-header: #aa3bff;
+  /* Brand gold — shared chrome, primary CTAs, ornament work */
+  --color-primary: #c08a2e;
+  --color-primary-deep: #9c6b1d;
+  --color-secondary: #21283f;
+
+  /* Parchment surfaces */
+  --color-geek-bg: #faf3e6;
+  --color-geek-card: #fffcf6;
+  --color-geek-accent: #f0e6d2;
+  --color-header: #21283f;
+
+  /* Per-world accent colors */
+  --color-cafe: #8b4a2b;
+  --color-cafe-deep: #6e3a20;
+  --color-emporium: #1f6b5c;
+  --color-emporium-deep: #17544a;
+  --color-rpg: #4b2e83;
+  --color-rpg-deep: #3a2266;
+
+  --font-display: "Playfair Display", "Georgia", serif;
+  --font-eyebrow: "Cinzel", "Georgia", serif;
+  --font-body: "EB Garamond", "Georgia", serif;
 }
 
 :root {
-  --text: #6b6375;
-  --text-h: #08060d;
-  --bg: #fff;
-  --border: #e5e4e7;
-  --accent: #aa3bff;
-  
-  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
-  line-height: 1.5;
+  --text: #5b5445;
+  --text-h: #21283f;
+  --bg: #faf3e6;
+  --border: #e8dcc0;
+  --accent: #c08a2e;
+
+  font-family: var(--font-body);
+  line-height: 1.6;
   font-weight: 400;
 
-  color-scheme: light dark;
+  color-scheme: light;
   color: var(--text);
   background-color: var(--bg);
 
@@ -28,16 +44,6 @@
   text-rendering: optimizeLegibility;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --text: #9ca3af;
-    --text-h: #f3f4f6;
-    --bg: #16171d;
-    --border: #2e303a;
-    --accent: #c084fc;
-  }
 }
 
 body {
@@ -50,4 +56,52 @@ body {
   min-height: 100vh;
   display: flex;
   flex-direction: column;
+}
+
+h1, h2, h3, h4 {
+  font-family: var(--font-display);
+}
+
+/* Reusable ornament: small-caps tracked label flanked by diamond marks */
+.eyebrow {
+  font-family: var(--font-eyebrow);
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+}
+
+.eyebrow::before,
+.eyebrow::after {
+  content: "\2726";
+  display: inline-block;
+  margin: 0 0.6em;
+  font-size: 0.7em;
+  vertical-align: middle;
+  opacity: 0.7;
+}
+
+/* Ornate parchment frame with hairline border + corner flourish */
+.ornate-frame {
+  position: relative;
+  border: 1px solid var(--border);
+}
+
+.ornate-frame::before,
+.ornate-frame::after {
+  content: "";
+  position: absolute;
+  width: 0.5rem;
+  height: 0.5rem;
+  border: 1px solid var(--color-primary);
+  transform: rotate(45deg);
+  opacity: 0.6;
+}
+
+.ornate-frame::before {
+  top: -0.28rem;
+  left: -0.28rem;
+}
+
+.ornate-frame::after {
+  bottom: -0.28rem;
+  right: -0.28rem;
 }
