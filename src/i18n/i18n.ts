@@ -5,8 +5,9 @@ import he from './locales/he';
 import ru from './locales/ru';
 import ar from './locales/ar';
 import ja from './locales/ja';
+import en from './locales/en';
 
-export const supportedLanguages = ['he', 'ru', 'ar', 'ja'] as const;
+export const supportedLanguages = ['he', 'ru', 'ar', 'ja', 'en'] as const;
 export type SupportedLanguage = (typeof supportedLanguages)[number];
 
 export const rtlLanguages: SupportedLanguage[] = ['he', 'ar'];
@@ -16,6 +17,7 @@ export const languageMeta: Record<SupportedLanguage, { label: string; nativeLabe
   ru: { label: 'Russian', nativeLabel: 'Русский' },
   ar: { label: 'Arabic', nativeLabel: 'العربية' },
   ja: { label: 'Japanese', nativeLabel: '日本語' },
+  en: { label: 'English', nativeLabel: 'English' },
 };
 
 export const getDirection = (language: string): 'rtl' | 'ltr' =>
@@ -35,6 +37,7 @@ i18n
       ru: { translation: ru },
       ar: { translation: ar },
       ja: { translation: ja },
+      en: { translation: en },
     },
     fallbackLng: 'he',
     supportedLngs: supportedLanguages as unknown as string[],
