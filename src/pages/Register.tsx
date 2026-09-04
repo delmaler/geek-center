@@ -2,9 +2,9 @@ import { useState, type ChangeEvent, type FormEvent } from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { useAuth } from '../context/AuthContext.tsx';
-import { Mail, Lock, User, UserPlus, AlertCircle } from 'lucide-react';
+import { Mail, Lock, User, UserPlus, AlertCircle, Loader2 } from 'lucide-react';
 
-interface RegisterFormData {
+interface FormData {
   name: string;
   email: string;
   password: string;
@@ -13,25 +13,20 @@ interface RegisterFormData {
 
 const Register = () => {
   const { t } = useTranslation();
-  const [formData, setFormData] = useState<RegisterFormData>({
-    name: '',
-    email: '',
-    password: '',
-    confirmPassword: ''
-  });
+  const [formData, setFormData] = useState<FormData>({ name: '', email: '', password: '', confirmPassword: '' });
   const [error, setError] = useState('');
+  const [submitting, setSubmitting] = useState(false);
   const { register } = useAuth();
   const navigate = useNavigate();
 
-  const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+  const handleChange = (e: ChangeEvent<HTMLInputElement>) =>
     setFormData({ ...formData, [e.target.name]: e.target.value });
-  };
 
-  const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
+  const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
     setError('');
 
-    if (Object.values(formData).some(val => !val)) {
+    if (Object.values(formData).some((v) => !v)) {
       setError(t('register.errorFillFields'));
       return;
     }
@@ -41,9 +36,15 @@ const Register = () => {
       return;
     }
 
-    // Mock register
-    register({ email: formData.email, name: formData.name });
-    navigate('/geekrpg/reserve');
+    setSubmitting(true);
+    try {
+      await register(formData.name, formData.email, formData.password);
+      navigate('/geekrpg/reserve');
+    } catch (err) {
+      setError(err instanceof Error ? err.message : t('register.errorFillFields'));
+    } finally {
+      setSubmitting(false);
+    }
   };
 
   return (
@@ -58,7 +59,7 @@ const Register = () => {
         <form onSubmit={handleSubmit} className="p-8 space-y-4">
           {error && (
             <div className="flex items-center p-3 bg-red-50 text-red-600 rounded-lg text-sm border border-red-100">
-              <AlertCircle className="w-4 h-4 me-2" />
+              <AlertCircle className="w-4 h-4 me-2 shrink-0" />
               {error}
             </div>
           )}
@@ -74,6 +75,7 @@ const Register = () => {
                 onChange={handleChange}
                 className="w-full ps-10 pe-4 py-3 bg-geek-bg border border-border rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
                 placeholder={t('register.fullNamePlaceholder')}
+                disabled={submitting}
               />
             </div>
           </div>
@@ -89,46 +91,49 @@ const Register = () => {
                 onChange={handleChange}
                 className="w-full ps-10 pe-4 py-3 bg-geek-bg border border-border rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
                 placeholder={t('register.emailPlaceholder')}
+                disabled={submitting}
               />
             </div>
           </div>
 
-          <div className="grid grid-cols-1 gap-4">
-            <div className="space-y-2">
-              <label className="text-sm font-semibold text-text-h">{t('register.passwordLabel')}</label>
-              <div className="relative">
-                <Lock className="absolute start-3 top-1/2 -translate-y-1/2 w-5 h-5 text-text" strokeWidth={1.75} />
-                <input
-                  name="password"
-                  type="password"
-                  value={formData.password}
-                  onChange={handleChange}
-                  className="w-full ps-10 pe-4 py-3 bg-geek-bg border border-border rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
-                  placeholder="••••••••"
-                />
-              </div>
+          <div className="space-y-2">
+            <label className="text-sm font-semibold text-text-h">{t('register.passwordLabel')}</label>
+            <div className="relative">
+              <Lock className="absolute start-3 top-1/2 -translate-y-1/2 w-5 h-5 text-text" strokeWidth={1.75} />
+              <input
+                name="password"
+                type="password"
+                value={formData.password}
+                onChange={handleChange}
+                className="w-full ps-10 pe-4 py-3 bg-geek-bg border border-border rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
+                placeholder="••••••••"
+                disabled={submitting}
+              />
             </div>
+          </div>
 
-            <div className="space-y-2">
-              <label className="text-sm font-semibold text-text-h">{t('register.confirmPasswordLabel')}</label>
-              <div className="relative">
-                <Lock className="absolute start-3 top-1/2 -translate-y-1/2 w-5 h-5 text-text" strokeWidth={1.75} />
-                <input
-                  name="confirmPassword"
-                  type="password"
-                  value={formData.confirmPassword}
-                  onChange={handleChange}
-                  className="w-full ps-10 pe-4 py-3 bg-geek-bg border border-border rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
-                  placeholder="••••••••"
-                />
-              </div>
+          <div className="space-y-2">
+            <label className="text-sm font-semibold text-text-h">{t('register.confirmPasswordLabel')}</label>
+            <div className="relative">
+              <Lock className="absolute start-3 top-1/2 -translate-y-1/2 w-5 h-5 text-text" strokeWidth={1.75} />
+              <input
+                name="confirmPassword"
+                type="password"
+                value={formData.confirmPassword}
+                onChange={handleChange}
+                className="w-full ps-10 pe-4 py-3 bg-geek-bg border border-border rounded-xl focus:ring-2 focus:ring-primary focus:border-transparent outline-none transition-all"
+                placeholder="••••••••"
+                disabled={submitting}
+              />
             </div>
           </div>
 
           <button
             type="submit"
-            className="w-full py-3.5 bg-primary text-white font-eyebrow text-xs rounded-full hover:opacity-90 transition-opacity shadow-lg shadow-primary/20 mt-4"
+            disabled={submitting}
+            className="w-full py-3.5 bg-primary text-white font-eyebrow text-xs rounded-full hover:opacity-90 transition-opacity shadow-lg shadow-primary/20 disabled:opacity-60 flex items-center justify-center gap-2 mt-4"
           >
+            {submitting && <Loader2 className="w-4 h-4 animate-spin" />}
             {t('register.createAccount')}
           </button>
 
