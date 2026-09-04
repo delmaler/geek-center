@@ -27,7 +27,7 @@ const ja: Translation = {
     contactForm: 'お問い合わせフォーム',
     privacyPolicy: 'プライバシーポリシー',
     termsOfUse: '利用規約',
-    copyright: '© {{year}} GeekCenter.co.il · 無断複写・転載を禁じます。',
+    copyright: '© {{year}} Portal · 無断複写・転載を禁じます。',
   },
   home: {
     heroEyebrow: 'ようこそ、旅人よ',
@@ -62,7 +62,7 @@ const ja: Translation = {
     events: [
       { month: '5月', day: '24', weekday: '土', title: 'D&Dワンショットナイト', meta: '19:00 · GeekRPG', tag: 'RPG' },
       { month: '5月', day: '31', weekday: '土', title: 'ラテアートワークショップ', meta: '11:00 · GeekCafe', tag: 'ワークショップ' },
-      { month: '6月', day: '07', weekday: '土', title: 'Magic: The Gathering — 店舗選手権', meta: '12:00 · GeekCenter', tag: 'トーナメント' },
+      { month: '6月', day: '07', weekday: '土', title: 'Magic: The Gathering — 店舗選手権', meta: '12:00 · Portal', tag: 'トーナメント' },
     ],
     highlightsTitle: 'ハイライト',
     highlights: [
@@ -74,7 +74,7 @@ const ja: Translation = {
   about: {
     title: '私たちの物語',
     storyP1:
-      'Geek Centerは、シンプルな気づきから生まれました。デジタル化が進む世界だからこそ、対面でつながる魔法はかつてないほど貴重だということです。私たちは、物理的なボードの上で「レベルアップ」が起こり、キャンペーンが何年も続き、好奇心旺盛な初心者からベテランまで誰もが居場所を感じられる場所を作りたいと考えました。',
+      'Portalは、シンプルな気づきから生まれました。デジタル化が進む世界だからこそ、対面でつながる魔法はかつてないほど貴重だということです。私たちは、物理的なボードの上で「レベルアップ」が起こり、キャンペーンが何年も続き、好奇心旺盛な初心者からベテランまで誰もが居場所を感じられる場所を作りたいと考えました。',
     storyP2:
       'ガレージでの小さなゲームコレクションから始まったこの場所は、今や街を代表するゲーミングハブへと成長しました。私たちはコミュニティを第一に考える空間であることを誇りに思い、地域のトーナメントから壮大なRPGの冒険まで、毎週さまざまなイベントを開催しています。',
     offeringsTitle: '冒険のための燃料',
@@ -96,7 +96,7 @@ const ja: Translation = {
     addressLine1: 'Gamer Lane 123, Meeple District',
     addressLine2: 'Downtown Metropolis, 54321',
     phone: '+1 (555) GEEK-OUT',
-    email: 'hello@geekcenter.cafe',
+    email: 'hello@portal.cafe',
   },
   login: {
     welcomeBack: 'お帰りなさい',
@@ -269,7 +269,7 @@ const ja: Translation = {
   },
   ttrpg: {
     title: 'TTRPGの世界',
-    subtitle: 'Geek CenterのテーブルトークRPG — キャンペーン、ワンショット、それを進行するゲームマスターたち。',
+    subtitle: 'PortalのテーブルトークRPG — キャンペーン、ワンショット、それを進行するゲームマスターたち。',
     subtitleLinkPrefix: 'カタンのようなボードゲームのテーブルをお探しですか?',
     subtitleLinkText: 'ボードゲーム',
     subtitleLinkSuffix: 'セクションをご覧ください。',
@@ -310,7 +310,7 @@ const ja: Translation = {
         name: 'Jordan Fields',
         role: '初心者に優しいファシリテーター',
         specialties: ['新規プレイヤー向けオンボーディング', 'D&D 5e'],
-        bio: 'ジョーダンのテーブルはGeek Centerに新しく来た多くの人にとって最初の一歩 — 忍耐強く、面白く、初心者への対応が抜群です。',
+        bio: 'ジョーダンのテーブルはPortalに新しく来た多くの人にとって最初の一歩 — 忍耐強く、面白く、初心者への対応が抜群です。',
         recommendations: [
           { title: 'Dragon of Icespire Peak', note: '入れ替わるプレイヤーグループに最適な、短くモジュール式のクエスト。' },
           { title: 'Lost Mine of Phandelver', note: 'バランスが取れた初心者に優しい定番の導入シナリオ。' },
@@ -323,7 +323,7 @@ const ja: Translation = {
   events: {
     eyebrow: '開催中のイベント',
     title: 'イベント&集い',
-    subtitle: 'ワークショップ、トーナメント、キャンペーンナイトなど — GeekCenterではいつも何かが起きています。',
+    subtitle: 'ワークショップ、トーナメント、キャンペーンナイトなど — Portalではいつも何かが起きています。',
     events: [
       { month: '5月', day: '24', weekday: '土', title: 'D&Dワンショットナイト', time: '19:00', location: 'GeekRPG', desc: '一回のセッションで完結する冒険 — 新規プレイヤーにも常連にも最適。', tag: 'RPG' },
       { month: '5月', day: '24', weekday: '土', title: 'ラテアートワークショップ', time: '11:00–13:00', location: 'GeekCafe', desc: '一杯ずつ、ラテアートの技術を学ぼう。', tag: 'ワークショップ' },

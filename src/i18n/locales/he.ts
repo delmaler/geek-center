@@ -27,7 +27,7 @@ const he: Translation = {
     contactForm: 'טופס יצירת קשר',
     privacyPolicy: 'מדיניות פרטיות',
     termsOfUse: 'תנאי שימוש',
-    copyright: '© {{year}} GeekCenter.co.il · כל הזכויות שמורות.',
+    copyright: '© {{year}} Portal · כל הזכויות שמורות.',
   },
   home: {
     heroEyebrow: 'ברוכים הבאים, נוסע',
@@ -62,7 +62,7 @@ const he: Translation = {
     events: [
       { month: 'מאי', day: '24', weekday: 'שבת', title: 'ערב וואן-שוט של D&D', meta: '19:00 · GeekRPG', tag: 'RPG' },
       { month: 'מאי', day: '31', weekday: 'שבת', title: 'סדנת אמנות לאטה', meta: '11:00 · GeekCafe', tag: 'סדנה' },
-      { month: 'יוני', day: '07', weekday: 'שבת', title: 'Magic: The Gathering — אליפות החנות', meta: '12:00 · GeekCenter', tag: 'טורניר' },
+      { month: 'יוני', day: '07', weekday: 'שבת', title: 'Magic: The Gathering — אליפות החנות', meta: '12:00 · Portal', tag: 'טורניר' },
     ],
     highlightsTitle: 'עדכונים',
     highlights: [
@@ -74,7 +74,7 @@ const he: Translation = {
   about: {
     title: 'הסיפור שלנו',
     storyP1:
-      'Geek Center נולד מתובנה פשוטה: בעולם דיגיטלי יותר ויותר, הקסם של חיבור פנים אל פנים יקר מאי פעם. רצינו ליצור מקום שבו "עליית שלב" קורית מעל לוח פיזי, שבו קמפיינים נמשכים שנים, ושבו כולם — מהמתחיל הסקרן ועד המקצוען המנוסה — מרגישים שייכים.',
+      'Portal נולד מתובנה פשוטה: בעולם דיגיטלי יותר ויותר, הקסם של חיבור פנים אל פנים יקר מאי פעם. רצינו ליצור מקום שבו "עליית שלב" קורית מעל לוח פיזי, שבו קמפיינים נמשכים שנים, ושבו כולם — מהמתחיל הסקרן ועד המקצוען המנוסה — מרגישים שייכים.',
     storyP2:
       'מה שהתחיל כאוסף קטן של משחקים במוסך הפך למרכז המשחקים המוביל בעיר. אנחנו גאים להיות מרחב שהקהילה במרכזו, ומארחים כל שבוע הכל, מטורנירים מקומיים ועד הרפתקאות RPG גדולות.',
     offeringsTitle: 'דלק להרפתקאות שלכם',
@@ -96,7 +96,7 @@ const he: Translation = {
     addressLine1: 'רחוב הגיימרים 123, רובע המיפל',
     addressLine2: 'מטרופוליס דאון-טאון, 54321',
     phone: '+1 (555) GEEK-OUT',
-    email: 'hello@geekcenter.cafe',
+    email: 'hello@portal.cafe',
   },
   login: {
     welcomeBack: 'ברוכים השבים',
@@ -269,7 +269,7 @@ const he: Translation = {
   },
   ttrpg: {
     title: 'עולם ה-TTRPG',
-    subtitle: 'משחקי תפקידים שולחניים ב-Geek Center — קמפיינים, וואן-שוטים והגייממאסטרים שמנהלים אותם.',
+    subtitle: 'משחקי תפקידים שולחניים ב-Portal — קמפיינים, וואן-שוטים והגייממאסטרים שמנהלים אותם.',
     subtitleLinkPrefix: 'מחפשים שולחנות למשחקי לוח כמו קטאן? עברו לעמוד ה',
     subtitleLinkText: 'משחקי לוח',
     subtitleLinkSuffix: '.',
@@ -310,7 +310,7 @@ const he: Translation = {
         name: 'Jordan Fields',
         role: 'מנחה ידידותי למתחילים',
         specialties: ['קליטת שחקנים חדשים', 'D&D 5e'],
-        bio: 'השולחן של ג\'ורדן הוא התחנה הראשונה לרוב המצטרפים החדשים ל-Geek Center — סבלני, מצחיק ומעולה עם מתחילים.',
+        bio: 'השולחן של ג\'ורדן הוא התחנה הראשונה לרוב המצטרפים החדשים ל-Portal — סבלני, מצחיק ומעולה עם מתחילים.',
         recommendations: [
           { title: 'Dragon of Icespire Peak', note: 'משימות קצרות ומודולריות, מושלמות לקבוצה מתחלפת של שחקנים חדשים.' },
           { title: 'Lost Mine of Phandelver', note: 'הרפתקת הפתיחה הקלאסית — מאוזנת וידידותית למתחילים.' },
@@ -323,7 +323,7 @@ const he: Translation = {
   events: {
     eyebrow: 'מה קורה',
     title: 'אירועים ומפגשים',
-    subtitle: 'סדנאות, טורנירים, ערבי קמפיין וכל מה שביניהם — תמיד קורה משהו ב-GeekCenter.',
+    subtitle: 'סדנאות, טורנירים, ערבי קמפיין וכל מה שביניהם — תמיד קורה משהו ב-Portal.',
     events: [
       { month: 'מאי', day: '24', weekday: 'שבת', title: 'ערב וואן-שוט של D&D', time: '19:00', location: 'GeekRPG', desc: 'הרפתקה במפגש בודד — מושלם לשחקנים חדשים וותיקים.', tag: 'RPG' },
       { month: 'מאי', day: '24', weekday: 'שבת', title: 'סדנת אמנות לאטה', time: '11:00–13:00', location: 'GeekCafe', desc: 'למדו את אמנות הלאטה, יציקה אחר יציקה.', tag: 'סדנה' },

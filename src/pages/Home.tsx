@@ -1,6 +1,6 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
-import { Coffee, Gem, Dices, ChevronRight, Star, BookOpen, Sparkles } from 'lucide-react';
+import { Coffee, Gem, Dices, ArrowUp, ArrowRight, ArrowDown, ArrowLeft, ChevronRight, Star, BookOpen, Sparkles } from 'lucide-react';
 import PortalMotif from '../components/PortalMotif.tsx';
 
 const worldMeta = [
@@ -65,7 +65,7 @@ const Home = () => {
               </Link>
             </div>
           </div>
-          <PortalMotif world="gold" satellites={[Coffee, Gem, Dices]} />
+          <PortalMotif world="gold" satellites={[ArrowUp, ArrowRight, ArrowDown, ArrowLeft]} icon={undefined} />
         </div>
       </section>
 

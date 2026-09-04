@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { useAuth } from '../context/AuthContext.tsx';
 import { LogOut, User, Menu, X, Home, Coffee, Gem, Dices, BookOpen, CalendarDays, Mail } from 'lucide-react';
 import LanguageSwitcher from './LanguageSwitcher.tsx';
-import CompassMark from './CompassMark.tsx';
+import logoMark from '../assets/logo-gold-dark-mark.jpeg';
 
 const worldAccents: Record<string, string> = {
   '/geek-cafe': 'cafe',
@@ -55,9 +55,9 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-20">
           <Link to="/" className="flex items-center gap-2 group shrink-0">
-            <CompassMark />
+            <img src={logoMark} alt="Portal" className="h-10 w-10 rounded-lg object-cover" />
             <span className="font-display font-bold text-2xl text-text-h tracking-tight">
-              GeekCenter<span className="text-primary">.co.il</span>
+              Portal<span className="text-primary">cafe.co.il</span>
             </span>
           </Link>
 

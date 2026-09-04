@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import { MapPin, Clock, Phone, Mail, MessageCircle, Share2, Globe } from 'lucide-react';
-import CompassMark from './CompassMark.tsx';
+import logoCompact from '../assets/logo-gold-light-compact.jpeg';
 
 const Footer = () => {
   const { t } = useTranslation();
@@ -18,10 +18,7 @@ const Footer = () => {
         <div className="grid grid-cols-1 md:grid-cols-4 gap-12">
           <div>
             <Link to="/" className="flex items-center gap-2 mb-4 group">
-              <CompassMark className="w-8 h-8" />
-              <span className="font-display font-bold text-xl text-text-h">
-                GeekCenter<span className="text-primary">.co.il</span>
-              </span>
+              <img src={logoCompact} alt="Portal" className="h-16 w-auto rounded-lg" />
             </Link>
             <p className="text-text text-sm leading-relaxed mb-5">{t('footer.tagline')}</p>
             <div className="flex gap-3">
