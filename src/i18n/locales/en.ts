@@ -27,7 +27,7 @@ const en: Translation = {
     contactForm: 'Contact Form',
     privacyPolicy: 'Privacy Policy',
     termsOfUse: 'Terms of Use',
-    copyright: '© {{year}} Portal · All rights reserved.',
+    copyright: '© {{year}} Portal Café · All rights reserved.',
   },
   home: {
     heroEyebrow: 'Welcome, Traveler',
@@ -62,7 +62,7 @@ const en: Translation = {
     events: [
       { month: 'May', day: '24', weekday: 'Sat', title: 'D&D One-Shot Night', meta: '19:00 · GeekRPG', tag: 'RPG' },
       { month: 'May', day: '31', weekday: 'Sat', title: 'Latte Art Workshop', meta: '11:00 · GeekCafe', tag: 'Workshop' },
-      { month: 'Jun', day: '07', weekday: 'Sat', title: 'Magic: The Gathering — Store Championship', meta: '12:00 · Portal', tag: 'Tournament' },
+      { month: 'Jun', day: '07', weekday: 'Sat', title: 'Magic: The Gathering — Store Championship', meta: '12:00 · Portal Café', tag: 'Tournament' },
     ],
     highlightsTitle: 'Highlights',
     highlights: [
@@ -74,7 +74,7 @@ const en: Translation = {
   about: {
     title: 'Our Story',
     storyP1:
-      'Portal was born out of a simple realization: in an increasingly digital world, the magic of face-to-face connection is more valuable than ever. We wanted to create a place where "leveling up" happened over a physical board, where campaigns lasted for years, and where everyone—from the curious newcomer to the seasoned pro—felt like they belonged.',
+      'Portal Café was born out of a simple realization: in an increasingly digital world, the magic of face-to-face connection is more valuable than ever. We wanted to create a place where "leveling up" happened over a physical board, where campaigns lasted for years, and where everyone—from the curious newcomer to the seasoned pro—felt like they belonged.',
     storyP2:
       "What started as a small collection of games in a garage has grown into the city's premier gaming hub. We're proud to be a community-first space, hosting everything from local tournaments to grand RPG adventures every single week.",
     offeringsTitle: 'Fuel for Your Adventures',
@@ -269,7 +269,7 @@ const en: Translation = {
   },
   ttrpg: {
     title: 'The TTRPG World',
-    subtitle: 'Tabletop role-playing games at Portal — campaigns, one-shots, and the Game Masters who run them.',
+    subtitle: 'Tabletop role-playing games at Portal Café — campaigns, one-shots, and the Game Masters who run them.',
     subtitleLinkPrefix: 'Looking for board game tables like Catan instead? Head over to the',
     subtitleLinkText: 'Board Games',
     subtitleLinkSuffix: ' section.',
@@ -310,7 +310,7 @@ const en: Translation = {
         name: 'Jordan Fields',
         role: 'Beginner-Friendly Facilitator',
         specialties: ['New Player Onboarding', 'D&D 5e'],
-        bio: "Jordan's table is the first stop for most Portal newcomers — patient, funny, and great with first-timers.",
+        bio: "Jordan's table is the first stop for most Portal Café newcomers — patient, funny, and great with first-timers.",
         recommendations: [
           { title: 'Dragon of Icespire Peak', note: 'Short, modular quests that are perfect for a rotating group of new players.' },
           { title: 'Lost Mine of Phandelver', note: 'The classic starter adventure — balanced and beginner-friendly.' },
@@ -323,7 +323,7 @@ const en: Translation = {
   events: {
     eyebrow: "What's On",
     title: 'Events & Gatherings',
-    subtitle: 'Workshops, tournaments, campaign nights, and everything in between — there is always something brewing at Portal.',
+    subtitle: 'Workshops, tournaments, campaign nights, and everything in between — there is always something brewing at Portal Café.',
     events: [
       { month: 'May', day: '24', weekday: 'Sat', title: 'D&D One-Shot Night', time: '19:00', location: 'GeekRPG', desc: 'A single-session adventure — perfect for new and returning players.', tag: 'RPG' },
       { month: 'May', day: '24', weekday: 'Sat', title: 'Latte Art Workshop', time: '11:00 – 13:00', location: 'GeekCafe', desc: 'Learn the art of latte, pour by pour.', tag: 'Workshop' },

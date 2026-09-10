@@ -57,7 +57,7 @@ const Navbar = () => {
           <Link to="/" className="flex items-center gap-2 group shrink-0">
             <img src={logoMark} alt="Portal" className="h-10 w-10 rounded-lg object-cover" />
             <span className="font-display font-bold text-2xl text-text-h tracking-tight">
-              Portal<span className="text-primary">cafe.co.il</span>
+              Portal <span className="text-primary">Café</span>
             </span>
           </Link>
 
