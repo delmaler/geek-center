@@ -45,22 +45,22 @@ const ar: Translation = {
         cta: 'ادخلوا إلى GeekCafe',
       },
       emporium: {
-        title: 'Geek Emporium',
+        title: 'Emporium',
         tagline: 'الكنز في انتظاركم.',
         desc: 'هدايا، مقتنيات، كتب، وقطع نادرة من عوالم الفانتازيا والخيال العلمي.',
         cta: 'ادخلوا إلى الإمبوريوم',
       },
       rpg: {
-        title: 'GeekRPG',
+        title: 'Portal RPG',
         tagline: 'قصتكم. مغامرتكم.',
         desc: 'انضموا إلى حملات أسطورية، تعرّفوا على فريقكم، وانطلقوا في مغامرات لا تُنسى.',
-        cta: 'ادخلوا إلى GeekRPG',
+        cta: 'ادخلوا إلى Portal RPG',
       },
     },
     upcomingEventsTitle: 'الفعاليات القادمة',
     viewAllEvents: 'عرض كل الفعاليات',
     events: [
-      { month: 'مايو', day: '24', weekday: 'سبت', title: 'أمسية دنجنز آند دراغونز', meta: '19:00 · GeekRPG', tag: 'RPG' },
+      { month: 'مايو', day: '24', weekday: 'سبت', title: 'أمسية دنجنز آند دراغونز', meta: '19:00 · Portal RPG', tag: 'RPG' },
       { month: 'مايو', day: '31', weekday: 'سبت', title: 'ورشة فن اللاتيه', meta: '11:00 · GeekCafe', tag: 'ورشة عمل' },
       { month: 'يونيو', day: '07', weekday: 'سبت', title: 'Magic: The Gathering — بطولة المتجر', meta: '12:00 · Portal Café', tag: 'بطولة' },
     ],
@@ -239,7 +239,7 @@ const ar: Translation = {
   geekRPG: {
     eyebrow: 'قصص. مغامرة.',
     tagline: 'الأسطورة تنتظر.',
-    subtitle: 'GeekRPG هو بوابتكم إلى تجارب لعب أدوار على الطاولة لا تُنسى. اجمعوا فريقكم، ارموا النرد، وانطلقوا إلى عالم آخر.',
+    subtitle: 'Portal RPG هو بوابتكم إلى تجارب لعب أدوار على الطاولة لا تُنسى. اجمعوا فريقكم، ارموا النرد، وانطلقوا إلى عالم آخر.',
     ctaBook: 'احجزوا مغامرتكم',
     features: [
       { title: 'عوالم غامرة', desc: 'قصص أسطورية بانتظاركم.' },
@@ -265,7 +265,7 @@ const ar: Translation = {
     ],
     groupCtaTitle: 'تبحثون عن مجموعة؟',
     groupCtaDesc: 'انضموا إلى مجتمعنا واعثروا على لاعبين ومدراء ألعاب ومغامرات!',
-    groupCtaButton: 'انضموا إلى مجتمع GeekRPG',
+    groupCtaButton: 'انضموا إلى مجتمع Portal RPG',
   },
   ttrpg: {
     title: 'عالم TTRPG',
@@ -325,11 +325,11 @@ const ar: Translation = {
     title: 'الفعاليات واللقاءات',
     subtitle: 'ورش عمل، بطولات، أمسيات حملات وكل ما بينها — دائمًا هناك شيء يحدث في Portal Café.',
     events: [
-      { month: 'مايو', day: '24', weekday: 'سبت', title: 'أمسية دنجنز آند دراغونز', time: '19:00', location: 'GeekRPG', desc: 'مغامرة في جلسة واحدة — مثالية للاعبين الجدد والقدامى.', tag: 'RPG' },
+      { month: 'مايو', day: '24', weekday: 'سبت', title: 'أمسية دنجنز آند دراغونز', time: '19:00', location: 'Portal RPG', desc: 'مغامرة في جلسة واحدة — مثالية للاعبين الجدد والقدامى.', tag: 'RPG' },
       { month: 'مايو', day: '24', weekday: 'سبت', title: 'ورشة فن اللاتيه', time: '11:00–13:00', location: 'GeekCafe', desc: 'تعلموا فن اللاتيه، سكبة تلو الأخرى.', tag: 'ورشة عمل' },
       { month: 'مايو', day: '31', weekday: 'سبت', title: 'أمسية ألعاب الطاولة', time: '18:00–22:00', location: 'GeekCafe', desc: 'أحضروا أصدقاءكم، اختاروا لعبة والعبوا!', tag: 'مجتمع' },
       { month: 'يونيو', day: '07', weekday: 'سبت', title: 'أساسيات بناء العوالم', time: '16:00–18:00', location: 'GeekCafe', desc: 'اصنعوا عوالم وقصصًا وشخصيات.', tag: 'ورشة عمل' },
-      { month: 'يونيو', day: '07', weekday: 'سبت', title: 'بطولة المتجر — Magic: The Gathering', time: '12:00', location: 'Geek Emporium', desc: 'بطولة تنافسية بالصيغة القياسية مع جوائز لأفضل المتصدرين.', tag: 'بطولة' },
+      { month: 'يونيو', day: '07', weekday: 'سبت', title: 'بطولة المتجر — Magic: The Gathering', time: '12:00', location: 'Emporium', desc: 'بطولة تنافسية بالصيغة القياسية مع جوائز لأفضل المتصدرين.', tag: 'بطولة' },
       { month: 'يونيو', day: '14', weekday: 'سبت', title: 'أمسية الحانة الأكوستيك', time: '19:00–22:00', location: 'GeekCafe', desc: 'موسيقى حية، مشروبات رائعة ورفقة طيبة.', tag: 'موسيقى حية' },
     ],
   },

@@ -45,22 +45,22 @@ const en: Translation = {
         cta: 'Enter GeekCafe',
       },
       emporium: {
-        title: 'Geek Emporium',
+        title: 'Emporium',
         tagline: 'Treasure Awaits.',
         desc: 'Gifts, collectibles, books, and rare finds from across fantasy and sci-fi realms.',
         cta: 'Enter Emporium',
       },
       rpg: {
-        title: 'GeekRPG',
+        title: 'Portal RPG',
         tagline: 'Your Story. Your Adventure.',
         desc: 'Join epic campaigns, meet your party, and roll into unforgettable adventures.',
-        cta: 'Enter GeekRPG',
+        cta: 'Enter Portal RPG',
       },
     },
     upcomingEventsTitle: 'Upcoming Events',
     viewAllEvents: 'View All Events',
     events: [
-      { month: 'May', day: '24', weekday: 'Sat', title: 'D&D One-Shot Night', meta: '19:00 · GeekRPG', tag: 'RPG' },
+      { month: 'May', day: '24', weekday: 'Sat', title: 'D&D One-Shot Night', meta: '19:00 · Portal RPG', tag: 'RPG' },
       { month: 'May', day: '31', weekday: 'Sat', title: 'Latte Art Workshop', meta: '11:00 · GeekCafe', tag: 'Workshop' },
       { month: 'Jun', day: '07', weekday: 'Sat', title: 'Magic: The Gathering — Store Championship', meta: '12:00 · Portal Café', tag: 'Tournament' },
     ],
@@ -239,7 +239,7 @@ const en: Translation = {
   geekRPG: {
     eyebrow: 'Stories. Adventure.',
     tagline: 'Legend Awaits.',
-    subtitle: 'GeekRPG is your portal to unforgettable tabletop roleplaying experiences. Gather your party, roll the dice, and step into another world.',
+    subtitle: 'Portal RPG is your portal to unforgettable tabletop roleplaying experiences. Gather your party, roll the dice, and step into another world.',
     ctaBook: 'Book Your Adventure',
     features: [
       { title: 'Immersive Worlds', desc: 'Epic stories await.' },
@@ -265,7 +265,7 @@ const en: Translation = {
     ],
     groupCtaTitle: 'Looking for a group?',
     groupCtaDesc: 'Join our community and find players, GMs, and adventures!',
-    groupCtaButton: 'Join the GeekRPG Community',
+    groupCtaButton: 'Join the Portal RPG Community',
   },
   ttrpg: {
     title: 'The TTRPG World',
@@ -325,11 +325,11 @@ const en: Translation = {
     title: 'Events & Gatherings',
     subtitle: 'Workshops, tournaments, campaign nights, and everything in between — there is always something brewing at Portal Café.',
     events: [
-      { month: 'May', day: '24', weekday: 'Sat', title: 'D&D One-Shot Night', time: '19:00', location: 'GeekRPG', desc: 'A single-session adventure — perfect for new and returning players.', tag: 'RPG' },
+      { month: 'May', day: '24', weekday: 'Sat', title: 'D&D One-Shot Night', time: '19:00', location: 'Portal RPG', desc: 'A single-session adventure — perfect for new and returning players.', tag: 'RPG' },
       { month: 'May', day: '24', weekday: 'Sat', title: 'Latte Art Workshop', time: '11:00 – 13:00', location: 'GeekCafe', desc: 'Learn the art of latte, pour by pour.', tag: 'Workshop' },
       { month: 'May', day: '31', weekday: 'Sat', title: 'Board Game Night', time: '18:00 – 22:00', location: 'GeekCafe', desc: 'Bring your friends, pick a game, play!', tag: 'Community' },
       { month: 'Jun', day: '07', weekday: 'Sat', title: 'Worldbuilding 101', time: '16:00 – 18:00', location: 'GeekCafe', desc: 'Create worlds, stories & characters.', tag: 'Workshop' },
-      { month: 'Jun', day: '07', weekday: 'Sat', title: 'Magic: The Gathering — Store Championship', time: '12:00', location: 'Geek Emporium', desc: 'Competitive standard-format tournament with prizes for top finishers.', tag: 'Tournament' },
+      { month: 'Jun', day: '07', weekday: 'Sat', title: 'Magic: The Gathering — Store Championship', time: '12:00', location: 'Emporium', desc: 'Competitive standard-format tournament with prizes for top finishers.', tag: 'Tournament' },
       { month: 'Jun', day: '14', weekday: 'Sat', title: 'Acoustic Tavern Night', time: '19:00 – 22:00', location: 'GeekCafe', desc: 'Live music, good drinks, great company.', tag: 'Live Music' },
     ],
   },

@@ -45,22 +45,22 @@ const he: Translation = {
         cta: 'כניסה ל-GeekCafe',
       },
       emporium: {
-        title: 'Geek Emporium',
+        title: 'Emporium',
         tagline: 'האוצר מחכה.',
         desc: 'מתנות, פריטי אספנות, ספרים וממצאים נדירים מעולמות הפנטזיה והמדע הבדיוני.',
         cta: 'כניסה לאמפוריום',
       },
       rpg: {
-        title: 'GeekRPG',
+        title: 'Portal RPG',
         tagline: 'הסיפור שלכם. ההרפתקה שלכם.',
         desc: 'הצטרפו לקמפיינים אפיים, הכירו את הקבוצה שלכם וצללו להרפתקאות בלתי נשכחות.',
-        cta: 'כניסה ל-GeekRPG',
+        cta: 'כניסה ל-Portal RPG',
       },
     },
     upcomingEventsTitle: 'אירועים קרובים',
     viewAllEvents: 'צפו בכל האירועים',
     events: [
-      { month: 'מאי', day: '24', weekday: 'שבת', title: 'ערב וואן-שוט של D&D', meta: '19:00 · GeekRPG', tag: 'RPG' },
+      { month: 'מאי', day: '24', weekday: 'שבת', title: 'ערב וואן-שוט של D&D', meta: '19:00 · Portal RPG', tag: 'RPG' },
       { month: 'מאי', day: '31', weekday: 'שבת', title: 'סדנת אמנות לאטה', meta: '11:00 · GeekCafe', tag: 'סדנה' },
       { month: 'יוני', day: '07', weekday: 'שבת', title: 'Magic: The Gathering — אליפות החנות', meta: '12:00 · Portal Café', tag: 'טורניר' },
     ],
@@ -239,7 +239,7 @@ const he: Translation = {
   geekRPG: {
     eyebrow: 'סיפורים. הרפתקה.',
     tagline: 'האגדה מחכה.',
-    subtitle: 'GeekRPG הוא השער שלכם לחוויות משחק תפקידים שולחניות בלתי נשכחות. אספו את הקבוצה, הטילו את הקוביות, וצעדו לעולם אחר.',
+    subtitle: 'Portal RPG הוא השער שלכם לחוויות משחק תפקידים שולחניות בלתי נשכחות. אספו את הקבוצה, הטילו את הקוביות, וצעדו לעולם אחר.',
     ctaBook: 'הזמינו הרפתקה',
     features: [
       { title: 'עולמות סוחפים', desc: 'סיפורים אפיים מחכים.' },
@@ -265,7 +265,7 @@ const he: Translation = {
     ],
     groupCtaTitle: 'מחפשים קבוצה?',
     groupCtaDesc: 'הצטרפו לקהילה שלנו ומצאו שחקנים, גייממאסטרים והרפתקאות!',
-    groupCtaButton: 'הצטרפו לקהילת GeekRPG',
+    groupCtaButton: 'הצטרפו לקהילת Portal RPG',
   },
   ttrpg: {
     title: 'עולם ה-TTRPG',
@@ -325,11 +325,11 @@ const he: Translation = {
     title: 'אירועים ומפגשים',
     subtitle: 'סדנאות, טורנירים, ערבי קמפיין וכל מה שביניהם — תמיד קורה משהו ב-Portal Café.',
     events: [
-      { month: 'מאי', day: '24', weekday: 'שבת', title: 'ערב וואן-שוט של D&D', time: '19:00', location: 'GeekRPG', desc: 'הרפתקה במפגש בודד — מושלם לשחקנים חדשים וותיקים.', tag: 'RPG' },
+      { month: 'מאי', day: '24', weekday: 'שבת', title: 'ערב וואן-שוט של D&D', time: '19:00', location: 'Portal RPG', desc: 'הרפתקה במפגש בודד — מושלם לשחקנים חדשים וותיקים.', tag: 'RPG' },
       { month: 'מאי', day: '24', weekday: 'שבת', title: 'סדנת אמנות לאטה', time: '11:00–13:00', location: 'GeekCafe', desc: 'למדו את אמנות הלאטה, יציקה אחר יציקה.', tag: 'סדנה' },
       { month: 'מאי', day: '31', weekday: 'שבת', title: 'ערב משחקי לוח', time: '18:00–22:00', location: 'GeekCafe', desc: 'הביאו חברים, בחרו משחק, שחקו!', tag: 'קהילה' },
       { month: 'יוני', day: '07', weekday: 'שבת', title: 'בניית עולמות 101', time: '16:00–18:00', location: 'GeekCafe', desc: 'צרו עולמות, סיפורים ודמויות.', tag: 'סדנה' },
-      { month: 'יוני', day: '07', weekday: 'שבת', title: 'אליפות החנות — Magic: The Gathering', time: '12:00', location: 'Geek Emporium', desc: 'טורניר תחרותי בפורמט סטנדרט עם פרסים למקומות המובילים.', tag: 'טורניר' },
+      { month: 'יוני', day: '07', weekday: 'שבת', title: 'אליפות החנות — Magic: The Gathering', time: '12:00', location: 'Emporium', desc: 'טורניר תחרותי בפורמט סטנדרט עם פרסים למקומות המובילים.', tag: 'טורניר' },
       { month: 'יוני', day: '14', weekday: 'שבת', title: 'ערב טברנה אקוסטי', time: '19:00–22:00', location: 'GeekCafe', desc: 'מוזיקה חיה, משקאות טובים וחברה נעימה.', tag: 'מוזיקה חיה' },
     ],
   },

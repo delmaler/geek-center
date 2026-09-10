@@ -36,8 +36,8 @@ const Navbar = () => {
   const navLinks = [
     { name: t('nav.home'), path: '/', icon: Home },
     { name: 'GeekCafe', path: '/geek-cafe', icon: Coffee },
-    { name: 'Geek Emporium', path: '/geek-emporium', icon: Gem },
-    { name: 'GeekRPG', path: '/geekrpg', icon: Dices },
+    { name: 'Emporium', path: '/geek-emporium', icon: Gem },
+    { name: 'Portal RPG', path: '/geekrpg', icon: Dices },
     { name: t('nav.events'), path: '/events', icon: CalendarDays },
     { name: 'Book', path: '/geekrpg/reserve', icon: BookOpen },
     { name: t('nav.contact'), path: '/contact', icon: Mail },

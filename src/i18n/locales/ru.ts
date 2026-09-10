@@ -45,22 +45,22 @@ const ru: Translation = {
         cta: 'Войти в GeekCafe',
       },
       emporium: {
-        title: 'Geek Emporium',
+        title: 'Emporium',
         tagline: 'Сокровища ждут.',
         desc: 'Подарки, коллекционные предметы, книги и редкие находки из миров фэнтези и фантастики.',
         cta: 'Войти в Эмпориум',
       },
       rpg: {
-        title: 'GeekRPG',
+        title: 'Portal RPG',
         tagline: 'Твоя история. Твоё приключение.',
         desc: 'Присоединяйтесь к эпичным кампаниям, встречайте свою группу и погружайтесь в незабываемые приключения.',
-        cta: 'Войти в GeekRPG',
+        cta: 'Войти в Portal RPG',
       },
     },
     upcomingEventsTitle: 'Ближайшие события',
     viewAllEvents: 'Все события',
     events: [
-      { month: 'Май', day: '24', weekday: 'Сб', title: 'Ваншот по D&D', meta: '19:00 · GeekRPG', tag: 'RPG' },
+      { month: 'Май', day: '24', weekday: 'Сб', title: 'Ваншот по D&D', meta: '19:00 · Portal RPG', tag: 'RPG' },
       { month: 'Май', day: '31', weekday: 'Сб', title: 'Мастер-класс по латте-арту', meta: '11:00 · GeekCafe', tag: 'Мастер-класс' },
       { month: 'Июн', day: '07', weekday: 'Сб', title: 'Magic: The Gathering — Чемпионат магазина', meta: '12:00 · Portal Café', tag: 'Турнир' },
     ],
@@ -239,7 +239,7 @@ const ru: Translation = {
   geekRPG: {
     eyebrow: 'Истории. Приключения.',
     tagline: 'Легенда ждёт.',
-    subtitle: 'GeekRPG — ваш портал в незабываемые настольные ролевые приключения. Соберите отряд, бросьте кубики и шагните в другой мир.',
+    subtitle: 'Portal RPG — ваш портал в незабываемые настольные ролевые приключения. Соберите отряд, бросьте кубики и шагните в другой мир.',
     ctaBook: 'Забронировать приключение',
     features: [
       { title: 'Захватывающие миры', desc: 'Эпичные истории ждут.' },
@@ -265,7 +265,7 @@ const ru: Translation = {
     ],
     groupCtaTitle: 'Ищете группу?',
     groupCtaDesc: 'Присоединяйтесь к нашему сообществу и находите игроков, мастеров и приключения!',
-    groupCtaButton: 'Вступить в сообщество GeekRPG',
+    groupCtaButton: 'Вступить в сообщество Portal RPG',
   },
   ttrpg: {
     title: 'Мир TTRPG',
@@ -325,11 +325,11 @@ const ru: Translation = {
     title: 'События и встречи',
     subtitle: 'Мастер-классы, турниры, кампанейские вечера и всё, что между ними — в Portal Café всегда что-то происходит.',
     events: [
-      { month: 'Май', day: '24', weekday: 'Сб', title: 'Ваншот по D&D', time: '19:00', location: 'GeekRPG', desc: 'Приключение в одной сессии — идеально для новых и постоянных игроков.', tag: 'RPG' },
+      { month: 'Май', day: '24', weekday: 'Сб', title: 'Ваншот по D&D', time: '19:00', location: 'Portal RPG', desc: 'Приключение в одной сессии — идеально для новых и постоянных игроков.', tag: 'RPG' },
       { month: 'Май', day: '24', weekday: 'Сб', title: 'Мастер-класс по латте-арту', time: '11:00–13:00', location: 'GeekCafe', desc: 'Учимся искусству латте, слой за слоем.', tag: 'Мастер-класс' },
       { month: 'Май', day: '31', weekday: 'Сб', title: 'Вечер настольных игр', time: '18:00–22:00', location: 'GeekCafe', desc: 'Берите друзей, выбирайте игру, играйте!', tag: 'Сообщество' },
       { month: 'Июн', day: '07', weekday: 'Сб', title: 'Основы worldbuilding', time: '16:00–18:00', location: 'GeekCafe', desc: 'Создаём миры, истории и персонажей.', tag: 'Мастер-класс' },
-      { month: 'Июн', day: '07', weekday: 'Сб', title: 'Чемпионат магазина — Magic: The Gathering', time: '12:00', location: 'Geek Emporium', desc: 'Соревновательный турнир в стандартном формате с призами для лучших.', tag: 'Турнир' },
+      { month: 'Июн', day: '07', weekday: 'Сб', title: 'Чемпионат магазина — Magic: The Gathering', time: '12:00', location: 'Emporium', desc: 'Соревновательный турнир в стандартном формате с призами для лучших.', tag: 'Турнир' },
       { month: 'Июн', day: '14', weekday: 'Сб', title: 'Акустический вечер в таверне', time: '19:00–22:00', location: 'GeekCafe', desc: 'Живая музыка, отличные напитки и хорошая компания.', tag: 'Живая музыка' },
     ],
   },

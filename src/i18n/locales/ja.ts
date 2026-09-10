@@ -45,22 +45,22 @@ const ja: Translation = {
         cta: 'GeekCafeへ入る',
       },
       emporium: {
-        title: 'Geek Emporium',
+        title: 'Emporium',
         tagline: '宝物が待っている。',
         desc: 'ファンタジーとSFの世界から集めたギフト、コレクターズアイテム、書籍、レアな掘り出し物。',
         cta: 'エンポリアムへ入る',
       },
       rpg: {
-        title: 'GeekRPG',
+        title: 'Portal RPG',
         tagline: 'あなたの物語。あなたの冒険。',
         desc: '壮大なキャンペーンに参加し、仲間と出会い、忘れられない冒険へ飛び込もう。',
-        cta: 'GeekRPGへ入る',
+        cta: 'Portal RPGへ入る',
       },
     },
     upcomingEventsTitle: '今後のイベント',
     viewAllEvents: 'すべてのイベントを見る',
     events: [
-      { month: '5月', day: '24', weekday: '土', title: 'D&Dワンショットナイト', meta: '19:00 · GeekRPG', tag: 'RPG' },
+      { month: '5月', day: '24', weekday: '土', title: 'D&Dワンショットナイト', meta: '19:00 · Portal RPG', tag: 'RPG' },
       { month: '5月', day: '31', weekday: '土', title: 'ラテアートワークショップ', meta: '11:00 · GeekCafe', tag: 'ワークショップ' },
       { month: '6月', day: '07', weekday: '土', title: 'Magic: The Gathering — 店舗選手権', meta: '12:00 · Portal Café', tag: 'トーナメント' },
     ],
@@ -239,7 +239,7 @@ const ja: Translation = {
   geekRPG: {
     eyebrow: '物語。冒険。',
     tagline: '伝説が待っている。',
-    subtitle: 'GeekRPGは、忘れられないテーブルトークRPG体験への入り口です。仲間を集め、サイコロを振り、別の世界へ足を踏み入れよう。',
+    subtitle: 'Portal RPGは、忘れられないテーブルトークRPG体験への入り口です。仲間を集め、サイコロを振り、別の世界へ足を踏み入れよう。',
     ctaBook: '冒険を予約する',
     features: [
       { title: '没入感のある世界', desc: '壮大な物語が待っている。' },
@@ -265,7 +265,7 @@ const ja: Translation = {
     ],
     groupCtaTitle: '仲間をお探しですか?',
     groupCtaDesc: 'コミュニティに参加して、プレイヤー、ゲームマスター、冒険を見つけよう!',
-    groupCtaButton: 'GeekRPGコミュニティに参加する',
+    groupCtaButton: 'Portal RPGコミュニティに参加する',
   },
   ttrpg: {
     title: 'TTRPGの世界',
@@ -325,11 +325,11 @@ const ja: Translation = {
     title: 'イベント&集い',
     subtitle: 'ワークショップ、トーナメント、キャンペーンナイトなど — Portal Caféではいつも何かが起きています。',
     events: [
-      { month: '5月', day: '24', weekday: '土', title: 'D&Dワンショットナイト', time: '19:00', location: 'GeekRPG', desc: '一回のセッションで完結する冒険 — 新規プレイヤーにも常連にも最適。', tag: 'RPG' },
+      { month: '5月', day: '24', weekday: '土', title: 'D&Dワンショットナイト', time: '19:00', location: 'Portal RPG', desc: '一回のセッションで完結する冒険 — 新規プレイヤーにも常連にも最適。', tag: 'RPG' },
       { month: '5月', day: '24', weekday: '土', title: 'ラテアートワークショップ', time: '11:00–13:00', location: 'GeekCafe', desc: '一杯ずつ、ラテアートの技術を学ぼう。', tag: 'ワークショップ' },
       { month: '5月', day: '31', weekday: '土', title: 'ボードゲームナイト', time: '18:00–22:00', location: 'GeekCafe', desc: '友達を連れて、ゲームを選んで、遊ぼう!', tag: 'コミュニティ' },
       { month: '6月', day: '07', weekday: '土', title: 'ワールドビルディング101', time: '16:00–18:00', location: 'GeekCafe', desc: '世界、物語、キャラクターを作ろう。', tag: 'ワークショップ' },
-      { month: '6月', day: '07', weekday: '土', title: '店舗選手権 — Magic: The Gathering', time: '12:00', location: 'Geek Emporium', desc: '上位入賞者に賞品が贈られるスタンダード形式の競技トーナメント。', tag: 'トーナメント' },
+      { month: '6月', day: '07', weekday: '土', title: '店舗選手権 — Magic: The Gathering', time: '12:00', location: 'Emporium', desc: '上位入賞者に賞品が贈られるスタンダード形式の競技トーナメント。', tag: 'トーナメント' },
       { month: '6月', day: '14', weekday: '土', title: 'アコースティック・タバーンナイト', time: '19:00–22:00', location: 'GeekCafe', desc: '生演奏、美味しい飲み物、素敵な仲間たち。', tag: 'ライブ音楽' },
     ],
   },
