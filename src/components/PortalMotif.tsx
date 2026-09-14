@@ -1,4 +1,5 @@
 import { type LucideIcon } from 'lucide-react';
+import windCompass from '../assets/wind-compass.jpeg';
 
 const iconColor: Record<string, string> = {
   gold: 'text-primary',
@@ -27,48 +28,13 @@ interface PortalMotifProps {
   satellites?: LucideIcon[];
 }
 
-const CARDINAL_ANGLES = [0, 90, 180, 270];
-const INTERCARDINAL_ANGLES = [45, 135, 225, 315];
-
 const PortalMotif = ({ world = 'gold', icon: CenterIcon, satellites = [] }: PortalMotifProps) => (
   <div className="relative w-full aspect-square max-w-md mx-auto flex items-center justify-center">
     {/* Ambient glow */}
     <div className={`absolute inset-0 rounded-full bg-gradient-to-br ${glowColor[world]} to-transparent blur-2xl`} />
 
-    {/* Compass rose SVG — viewBox 200×200, centre at (100,100) */}
-    <svg viewBox="0 0 200 200" className={`absolute inset-0 w-full h-full ${iconColor[world]}`} aria-hidden="true">
-      {/* Concentric rings */}
-      <circle cx="100" cy="100" r="96" fill="none" stroke="currentColor" strokeWidth="1"    strokeOpacity="0.22" />
-      <circle cx="100" cy="100" r="68" fill="none" stroke="currentColor" strokeWidth="0.75" strokeOpacity="0.18" strokeDasharray="4 3" />
-      <circle cx="100" cy="100" r="40" fill="none" stroke="currentColor" strokeWidth="1"    strokeOpacity="0.22" />
-
-      {/* Cardinal N / E / S / W — large points */}
-      {CARDINAL_ANGLES.map((angle) => (
-        <g key={angle} transform={`rotate(${angle} 100 100)`}>
-          {/* lit half */}
-          <polygon points="100,4 93,58 100,66"  fill="currentColor" fillOpacity="0.85" />
-          {/* shadow half */}
-          <polygon points="100,4 107,58 100,66" fill="currentColor" fillOpacity="0.38" />
-        </g>
-      ))}
-
-      {/* Intercardinal NE / SE / SW / NW — smaller points */}
-      {INTERCARDINAL_ANGLES.map((angle) => (
-        <g key={angle} transform={`rotate(${angle} 100 100)`}>
-          <polygon points="100,30 97,63 100,68"  fill="currentColor" fillOpacity="0.60" />
-          <polygon points="100,30 103,63 100,68" fill="currentColor" fillOpacity="0.26" />
-        </g>
-      ))}
-
-      {/* Centre medallion — fills over compass-point bases */}
-      <circle cx="100" cy="100" r="28"
-        fill="var(--color-geek-card)"
-        stroke="currentColor" strokeWidth="1.5" strokeOpacity="0.30" />
-      {/* Inner accent ring */}
-      <circle cx="100" cy="100" r="15"
-        fill="none"
-        stroke="currentColor" strokeWidth="0.75" strokeOpacity="0.20" />
-    </svg>
+    {/* Wind compass illustration */}
+    <img src={windCompass} alt="" className="absolute inset-0 w-full h-full object-contain" aria-hidden="true" />
 
     {/* Centre icon — optional */}
     {CenterIcon && (
