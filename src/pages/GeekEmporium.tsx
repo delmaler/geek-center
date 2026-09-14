@@ -79,7 +79,7 @@ const GeekEmporium = () => {
             <p className="font-display font-bold text-4xl text-text-h mb-2">Useful things.</p>
             <p className="font-display font-bold text-4xl text-primary mb-6">Geek things.</p>
             <p className="text-text leading-relaxed mb-10 max-w-md">
-              ה-Emporium הוא חנות של Portal. מקום למצוא בו משחקים, ספרים, מיניאטורות, יצירות, אביזרים ודברים שלא ידעתם שאתם צריכים עד שראיתם אותם על המדף.
+              מקום לאוצרות מעולמות הפנטזיה והמדע הבדיוני. יצירות של אמנים ויוצרים, מיניאטורות, ספרים, קוביות, TTRPG, D&D, Warhammer 40K ועוד הפתעות לכל מי שאוהב משחקים, סיפורים והרפתקאות.
             </p>
             <div className="flex flex-wrap gap-4">
               <a
