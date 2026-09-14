@@ -30,7 +30,7 @@ const Contact = () => {
           <h1 className="font-display font-bold text-4xl sm:text-5xl text-text-h mb-6">{t('contact.title')}</h1>
           <p className="text-lg text-text leading-relaxed max-w-lg">{t('contact.subtitle')}</p>
         </div>
-        <PortalMotif world="gold" icon={Mail} satellites={[Phone, MessageCircle]} />
+        <PortalMotif world="gold" />
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-12">

@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import {
-  Gem, BookOpen, Dices, Gift, Users, Star, Sparkles, ChevronRight,
+  BookOpen, Dices, Gift, Users, Star, Sparkles, ChevronRight,
   Paintbrush, type LucideIcon,
 } from 'lucide-react';
 import PortalMotif from '../components/PortalMotif.tsx';
@@ -97,7 +97,7 @@ const GeekEmporium = () => {
               </Link>
             </div>
           </div>
-          <PortalMotif world="emporium" icon={Gem} satellites={[Dices, BookOpen, Gift]} />
+          <PortalMotif world="emporium" />
         </div>
       </section>
 

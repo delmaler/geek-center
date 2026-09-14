@@ -26,7 +26,7 @@ const About = () => {
             <ChevronRight className="w-3.5 h-3.5 rtl:rotate-180" />
           </Link>
         </div>
-        <PortalMotif world="cafe" icon={Coffee} satellites={[Beer, Pizza]} />
+        <PortalMotif world="cafe" />
       </div>
 
       {/* Offerings */}

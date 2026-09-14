@@ -223,7 +223,7 @@ const GeekCafe = () => {
               </Link>
             </div>
           </div>
-          <PortalMotif world="cafe" icon={Coffee} satellites={[UtensilsCrossed, CupSoda, Beer]} />
+          <PortalMotif world="cafe" />
         </div>
       </section>
 

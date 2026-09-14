@@ -1,7 +1,7 @@
 import { Link } from 'react-router-dom';
 import { useTranslation } from 'react-i18next';
 import {
-  Dices, Swords, DoorOpen, ScrollText, Users, Crown, Sparkles, Coffee, Star,
+  Dices, Swords, DoorOpen, ScrollText, Users, Crown, Coffee, Star,
 } from 'lucide-react';
 import PortalMotif from '../components/PortalMotif.tsx';
 
@@ -208,7 +208,7 @@ const GeekRPG = () => {
               </a>
             </div>
           </div>
-          <PortalMotif world="rpg" icon={Swords} satellites={[Dices, ScrollText, Sparkles]} />
+          <PortalMotif world="rpg" />
         </div>
 
         {/* Quick stats */}

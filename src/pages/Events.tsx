@@ -1,5 +1,5 @@
 import { useTranslation } from 'react-i18next';
-import { CalendarDays, MapPin } from 'lucide-react';
+import { MapPin } from 'lucide-react';
 import PortalMotif from '../components/PortalMotif.tsx';
 
 interface EventItem {
@@ -26,7 +26,7 @@ const Events = () => {
             <h1 className="font-display font-bold text-4xl sm:text-5xl text-text-h mb-6">{t('events.title')}</h1>
             <p className="text-lg text-text leading-relaxed max-w-lg">{t('events.subtitle')}</p>
           </div>
-          <PortalMotif world="gold" icon={CalendarDays} />
+          <PortalMotif world="gold" />
         </div>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
