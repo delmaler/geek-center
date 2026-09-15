@@ -41,7 +41,7 @@ const en: Translation = {
       cafe: {
         title: 'GeekCafe',
         tagline: 'Eat. Drink. Relax.',
-        desc: 'Great coffee, epic food, board games, and cozy vibes for every kind of geek.',
+        desc: 'The smell of fresh coffee, hot food, cold beer, and the warm atmosphere of an inviting tavern. A place to stop by, sit together, eat well, and stay a little longer.',
         cta: 'Enter GeekCafe',
       },
       emporium: {
