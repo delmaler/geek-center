@@ -4,7 +4,7 @@ import { useTranslation } from 'react-i18next';
 import { useAuth } from '../context/AuthContext.tsx';
 import { LogOut, User, Menu, X, Home, Coffee, Gem, Dices, BookOpen, CalendarDays, Mail } from 'lucide-react';
 import LanguageSwitcher from './LanguageSwitcher.tsx';
-import logoMark from '../assets/logo-gold-dark-mark.jpeg';
+import portalLogo from '../assets/portal-logo-full.png';
 
 const worldAccents: Record<string, string> = {
   '/geek-cafe': 'cafe',
@@ -53,12 +53,16 @@ const Navbar = () => {
   return (
     <nav className="bg-geek-bg border-b border-border sticky top-0 z-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center h-20">
-          <Link to="/" className="flex items-center gap-2 group shrink-0">
-            <img src={logoMark} alt="Portal" className="h-10 w-10 rounded-lg object-cover" />
-            <span className="font-display font-bold text-2xl text-text-h tracking-tight">
-              Portal <span className="text-primary">Café</span>
-            </span>
+        <div className="relative flex justify-between items-center h-20">
+          <Link to="/" className="hidden xl:flex items-center shrink-0">
+            <img src={portalLogo} alt="Portal Café" className="h-16 w-auto" />
+          </Link>
+
+          <Link
+            to="/"
+            className="xl:hidden absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2"
+          >
+            <img src={portalLogo} alt="Portal Café" className="h-11 w-auto" />
           </Link>
 
           <div className="hidden xl:flex xl:items-center xl:gap-6">
