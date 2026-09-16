@@ -17,6 +17,7 @@ const ja: Translation = {
       food: { title: 'フード&ドリンク', desc: '愛情を込めて。' },
       magic: { title: '魔法と想像力', desc: '限界はありません。' },
     },
+    underConstruction: 'サイトは建設中です',
   },
   footer: {
     tagline: 'コーヒー、宝物、冒険への扉。ギーク、夢見る人、冒険者たちのための地域のたまり場です。',

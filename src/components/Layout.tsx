@@ -2,6 +2,7 @@ import { Outlet } from 'react-router-dom';
 import Navbar from './Navbar.tsx';
 import Footer from './Footer.tsx';
 import FeatureStrip from './FeatureStrip.tsx';
+import UnderConstructionBadge from './UnderConstructionBadge.tsx';
 
 const Layout = () => {
   return (
@@ -12,6 +13,7 @@ const Layout = () => {
       </main>
       <FeatureStrip />
       <Footer />
+      <UnderConstructionBadge />
     </div>
   );
 };

@@ -17,6 +17,7 @@ const he: Translation = {
       food: { title: 'אוכל ושתייה', desc: 'מוכן באהבה.' },
       magic: { title: 'קסם ודמיון', desc: 'ללא גבולות.' },
     },
+    underConstruction: 'האתר עדיין בבנייה',
   },
   footer: {
     tagline: 'שער לקפה, אוצרות והרפתקאות. המרכז השכונתי שלכם לגיקים, חולמים והרפתקנים.',

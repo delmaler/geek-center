@@ -17,6 +17,7 @@ const en: Translation = {
       food: { title: 'Food & Drink', desc: 'Made with love.' },
       magic: { title: 'Magic & Imagination', desc: 'No limits.' },
     },
+    underConstruction: 'Site under construction',
   },
   footer: {
     tagline: 'A portal to coffee, treasure & adventure. Your neighborhood hub for geeks, dreamers and adventurers.',

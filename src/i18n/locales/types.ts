@@ -28,6 +28,7 @@ export interface Translation {
       food: { title: string; desc: string };
       magic: { title: string; desc: string };
     };
+    underConstruction: string;
   };
   footer: {
     tagline: string;
